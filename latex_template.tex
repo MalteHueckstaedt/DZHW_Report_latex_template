@@ -1,6 +1,7 @@
 % partially adapated from pandoc latex template by Rmarkdown
 \documentclass[a4paper,10pt]{article}
 
+\usepackage{csquotes}
 % use Calibri system font:
 \usepackage{fontspec}
 \setmainfont{Calibri}
@@ -20,7 +21,7 @@
 \usepackage[left=4cm, right=2.5cm, top=1cm, bottom=1cm]{geometry}
 % get language from rmarkdown
 $if(lang)$
-\usepackage[shorthands=off,$lang$]{babel}
+\usepackage[ngerman]{babel}
 $endif$
 % define DZHW blue
 \usepackage{xcolor}

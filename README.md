@@ -16,4 +16,4 @@ Anschließend werden sämtliche Varianten von `Calibri` per Doppelklick mittels 
 
 #### Preload Hyphenation Patterns
 
- tinytex::tlmgr_install("collection-langgerman")`
+ `tinytex::tlmgr_install("collection-langgerman")`

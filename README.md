@@ -1,1 +1,3 @@
-# DZHW_Report_latex_template
+# DZHW Report latex template
+
+DZHW Projektbericht template, basierend auf S.Stahlschmidt.

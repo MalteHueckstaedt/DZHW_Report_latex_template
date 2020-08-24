@@ -1,0 +1,170 @@
+% partially adapated from pandoc latex template by Rmarkdown
+\documentclass[a4paper,10pt]{article}
+
+% use Calibri system font:
+\usepackage{fontspec}
+\setmainfont{Calibri}
+% set line spacing:
+\usepackage{setspace}
+\setstretch{1.2}
+% math typing:
+\usepackage{amssymb,amsmath}
+% define command for euro symbol:
+\newcommand{\euro}{€}
+% use upquote for straight quotes in verbatim environments:
+\usepackage{upquote}
+% use microtype if available:
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+% set DZHW margins:
+\usepackage[left=4cm, right=2.5cm, top=1cm, bottom=1cm]{geometry}
+% get language from rmarkdown
+\usepackage[shorthands=off,de-DE]{babel}
+% define DZHW blue
+\usepackage{xcolor}
+\definecolor{DZHWblue}{RGB}{0,106,178}
+% use biblatex
+\usepackage{biblatex}
+\addbibresource{Bibliography.bib}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% define header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear all fields
+\renewcommand{\headrulewidth}{0.5pt}
+\fancyheadoffset[R]{\dimexpr4.8cm-2.2cm\relax}
+\fancyfootoffset[R]{\dimexpr0.5cm\relax}
+\rhead{\leftmark}
+\lfoot{\setlength{\unitlength}{1mm}
+            \begin{picture}(0,0)
+            \put(0,0){\includegraphics[width=1.69cm]{Logo_DZHW_ohne-Text.jpg}}
+            \end{picture}}
+\rfoot{This is the short title | \thepage}
+
+\usepackage[unicode=true]{hyperref}
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Author A; Author B},
+            pdftitle={This is the long title},
+            colorlinks=true,
+            citecolor=DZHWblue,
+            urlcolor=DZHWblue,
+            linkcolor=DZHWblue,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+% provide a tightlist as required by pandoc:
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% set indention of subsequent paragraphs:
+\setlength{\parindent}{2em}
+% set vertical space betwen paragraphs:
+\setlength{\parskip}{0em}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+% allow for depth 5 in numbering sections
+\setcounter{secnumdepth}{0}
+% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+% titling to modify title page:
+\usepackage{titling}
+\pretitle{\vspace{2cm}
+        \vfill
+        \flushleft%
+        \LARGE
+        Author A / Author B \\
+        \vspace{0.75cm}%
+        \Huge
+        }
+\posttitle{\flushleft%
+        }
+\predate{\vfill
+        \flushright
+        \huge\textbf{Final Report}\\
+        \LARGE December 2020
+        \flushleft}
+\postdate{%
+        \hspace*{-4cm}\includegraphics[width=18.36cm]{DZHW_blue_bar.png}\\
+        \vspace{0.5cm}
+        \includegraphics[width=3.33cm]{Logo_DZHW_englisch.jpg}%
+    }
+
+% start actual document:
+\begin{document}
+% title page
+% title:
+\title{This is the long title}
+% date:
+\date{} % We don't use the latex command for the date
+% title page:
+\maketitle\thispagestyle{empty}
+% impressum
+\newpage
+\thispagestyle{empty}
+\newgeometry{left=2.2cm, right=4.8cm, headsep=1.6cm, headheight=0.75cm, top=1.25cm, bottom=2.6cm, footskip=1.4cm, textheight=23.5cm,includehead}
+\null\vfill
+\footnotesize
+\noindent\textbf{Editor:}\\
+German Centre for Higher Education Research and Science Studies (DZHW) GmbH\\
+Lange Laube 12 | 30159 Hannover | Germany | info@dzhw.eu |www.dzhw.eu\\
+POB 2920 | 30029 Hannover | Germany\\
+phone: +49 511 450670-0 | fax: +49 511 450670-960\\
+\textbf{Chairman of the Supervisory Board:}\\
+Ministerialdirigent Peter Greisler\\
+\textbf{Scientific Director:}\\
+Prof. Dr. Monika Jungbauer-Gans\\
+\textbf{Managing Director:}\\
+Karen Schlüter\\
+\textbf{Registration Court:}\\
+Amtsgericht Hannover | HRB 6489\\
+VAT No.: DE291239300\\
+December 2020
+% table of contents
+\newpage
+\thispagestyle{empty}
+\normalsize
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+
+% start main body:
+\newpage
+\clearpage
+\setcounter{page}{1}
+\hypertarget{motivation}{%
+\section{Motivation}\label{motivation}}
+
+Here some text about diamonds.
+
+\hypertarget{analysis}{%
+\section{Analysis}\label{analysis}}
+
+Here some text to explain the analysis, in which we apply ggplot2 \autocite{Wickham2009}.
+
+\hypertarget{result}{%
+\section{Result}\label{result}}
+
+We have data about 53940 diamonds. Only
+126 are larger than
+2.5 carats. The distribution of the remainder is shown in Figure \ref{fig:diamond-plot}.
+
+\begin{figure}
+\centering
+\includegraphics{example_report_files/figure-latex/diamond-plot-1.pdf}
+\caption{\label{fig:diamond-plot}A plot on diamonds.}
+\end{figure}
+
+\newpage
+\printbibliography[title=References]
+
+\end{document}

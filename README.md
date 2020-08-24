@@ -1,3 +1,13 @@
 # DZHW Report latex template
 
-DZHW Projektbericht template, basierend auf S.Stahlschmidt.
+DZHW Projektbericht template. Grundlage ist der Code von S.Stahlschmidt.
+
+## Nutzung auf OSX
+
+### Vorbereitung
+
+Um das `.RMD`-File kompilieren zu können, ist es nötig unter OSX die Schrift `Calibiri` systemweit nutzbar zu machen. Ist **Office Word** bereits installiert, muss hierzu lediglich der entsprechende Schriften-Ordner des Apps aufgerufen werden:
+
+`/Applications/Microsoft Word.app/Contents/Resources/DFonts/`
+
+Anschließend werden sämtliche Varianten von `Calibri` per Doppelklick mittels der Schriftensammlung-App händisch systemweit installiert.

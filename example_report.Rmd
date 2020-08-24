@@ -4,9 +4,9 @@ short-title: "This is the short title"
 author:
 - Author A
 - Author B
-date: "December 2018"
+date: "December 2020"
 doc-type: "Final Report"
-lang: english
+lang: de-DE
 bibliography: Bibliography.bib
 editor_options: 
   chunk_output_type: console

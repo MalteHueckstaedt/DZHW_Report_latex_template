@@ -1,0 +1,64 @@
+---
+title: "This is the long title"
+short-title: "This is the short title"
+author:
+- Author A
+- Author B
+date: "December 2018"
+doc-type: "Final Report"
+lang: english
+bibliography: Bibliography.bib
+editor_options: 
+  chunk_output_type: console
+output:
+  bookdown::pdf_document2:
+    fig_caption: yes
+    toc: yes
+    keep_tex: false
+    template: latex_template.tex
+    latex_engine: lualatex
+    citation_package: biblatex
+    number_sections: false
+  bookdown::word_document2:
+    fig_caption: yes
+---
+
+# Motivation
+
+Here some text about diamonds.
+
+# Analysis
+
+Here some text to explain the analysis, in which we apply ggplot2 [@Wickham2009].
+
+```{r setup, include = FALSE}
+library(ggplot2)
+library(dplyr)
+
+smaller <- diamonds %>% 
+  filter(carat <= 2.5)
+```
+
+# Result
+
+We have data about `r nrow(diamonds)` diamonds. Only 
+`r nrow(diamonds) - nrow(smaller)` are larger than
+2.5 carats. The distribution of the remainder is shown in Figure \@ref(fig:diamond-plot).
+
+```{r diamond-plot, echo = FALSE, fig.width = 7, fig.height = 3, fig.cap = "A plot on diamonds.", fig.pos = "H"}
+smaller %>% 
+    ggplot(aes(carat)) + 
+    geom_freqpoly(binwidth = 0.01) + 
+    theme_bw() +
+    theme(legend.position = "none",
+        axis.ticks = element_blank(),
+        axis.text = element_text(face="italic", color="black", size=7),
+        axis.title.y = element_text(face="italic", color="black", size=8),
+        axis.title.x=element_text(face="italic", color="black", size=8),
+        plot.title = element_text(size=8, hjust = 0.5),
+        legend.title=element_blank(),
+        legend.text = element_text(face="italic", color="black", size=7))
+```
+
+
+# References

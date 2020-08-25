@@ -14,6 +14,7 @@ output:
   bookdown::pdf_document2:
     fig_caption: yes
     toc: yes
+    toc_depth: 5
     keep_tex: false
     template: latex_template_de.tex
     latex_engine: lualatex
@@ -27,10 +28,10 @@ output:
 
 Here some text about diamonds.
 
-# Analysis
+## Analysis
 
 
-# Erstellung eigener Funktionen
+### Erstellung eigener Funktionen
 
 Da keine kompakte R-Funktion für die Fusionierung redundanter Spaltenvektoren besteht, die Spaltenvektoren fusioniert, die fusionierte Variable umbenennt sowie die Ursprungsvariablen aus dem Datensatz entfernt, wird eine entsprechende Funktion im folgenden selbst geschrieben. Diese Funktion soll konkret folgende Subfunktionen aufweisen:
 

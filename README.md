@@ -1,6 +1,6 @@
 # DZHW Report latex template
 
-DZHW Projektbericht template. Grundlage ist der Code von S.Stahlschmidt.
+FDZ Daten und Methodenbericht template. Grundlage ist der Code von S.Stahlschmidt.
 
 ## Nutzung auf OSX
 

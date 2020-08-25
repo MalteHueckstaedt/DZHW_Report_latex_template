@@ -2,3 +2,12 @@
 .Rhistory
 .RData
 .Ruserdata
+*.DS_Store
+!spec/*.DS_Store
+.DS_Store
+*.tmp
+~$*.doc*
+~$*.xls*
+*.xlk
+~$*.ppt*
+*.~vsd*

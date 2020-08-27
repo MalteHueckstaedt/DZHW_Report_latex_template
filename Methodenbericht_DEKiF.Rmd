@@ -16,8 +16,8 @@ editor_options:
 output:
   bookdown::pdf_document2:
     fig_caption: yes
-    toc: yes
-    toc_depth: 5
+    toc: no
+    #toc_depth: 5
     keep_tex: false
     template: latex_template_de.tex
     latex_engine: xelatex
@@ -25,6 +25,22 @@ output:
   # bookdown::word_document2:
   #   fig_caption: yes
 ---
+
+\pagenumbering{gobble}
+\tableofcontents
+
+\newpage
+\pagenumbering{Roman}
+\listoffigures
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+
+\newpage
+\listoftables
+\addcontentsline{toc}{section}{Tabellenverzeichnis}
+
+\newpage
+\pagenumbering{arabic}
+
 
 # Studienüberblick
 
@@ -38,7 +54,7 @@ Die Studie folgt einem triangulierenden Mixed Methods-Design [ @flickTriangulati
 
 Das Verbundprojekt DEKiF wird vom *Bundesministerium für Bildung und Forschung* (BMBF) bis 2022 gefördert. Seine Durchführung erfolgt in einer Kooperation zwischen dem DZHW (Abteilungen Governance in Hochschule und Wissenschaft und Forschungssystem und Wissenschaftsdynamik), der Heinrich-Heine-Universität Düsseldorf und dem Stifterverband für die Deutsche Wissenschaft.
 
-## Websurvey
+# Websurvey
 
 Im Rahmen des Websurvey [@callegaroWebSurveyMethodology2015 ] des Verbundprojekts DEKiF werden (1) die Prozesse der Zusammenarbeit in DFG-Forschungsverbünden, (2) die dabei auftretenden Probleme sowie (3) die subjektive Einschätzung des Erfolgs des Verbundes aus Sicht der Befragten untersuchen. Die Prozesse, auftretende Probleme und Erfolgseinschätzungen werden dabei zu den Rahmenbedingungen (z.B. der personellen, räumlichen oder fachlichen Heterogenität) von Forschungsverbünden in Beziehung gesetzt. Forschungsfragen des Websurveys sind also:
 
@@ -66,12 +82,22 @@ Im Rahmen des Websurvey [@callegaroWebSurveyMethodology2015 ] des Verbundprojekt
 
 Der inhaltliche Bezugspunkt des Websurveys ist die Kooperation auf Verbundebene, also die Zusammenarbeit zwischen der Verbundleitung (Sprecher\*in) und den Principal Investigators (Teilprojektleiter\*innen/Antragsteller\*innen). Die Zusammenarbeit innerhalb der Teilprojekte ist nicht Gegenstand der Befragung.
 
-Unter Verbundebene wird im Rahmen des Websurveys jene Ebene von Forschungsverbünden verstanden, auf der die Verbundleitung (Sprecher\*in) und die Principal Investigator (Teilprojektleiter\*innen/Antragsteller\*innen) teilprojektübergreifend an der Erreichung der gemeinsamen Verbundziele arbeiten.
+\vspace{3 mm}
 
-Die nachfolgende Darstellung veranschaulicht schematisch den Zusammenhang zwischen verschiedenen Statusgruppen von Verbundmitgliedern, Teilprojekten und der Verbundebene eines Forschungsverbundes.
+Unter Verbundebene wird im Rahmen des Websurveys jene Ebene von Forschungsverbünden verstanden, auf der die Verbundleitung (Sprecher\*in) und die Principal Investigator (Teilprojektleiter\*innen/Antragsteller\*innen) teilprojektübergreifend an der Erreichung der gemeinsamen Verbundziele arbeiten. Die nachfolgende Darstellung veranschaulicht schematisch den Zusammenhang zwischen verschiedenen Statusgruppen von Verbundmitgliedern, Teilprojekten und der Verbundebene eines Forschungsverbundes.
+
+(ref:defila) [-@defilaForschungsverbundmanagementHandbuchFur2006, 28]
+\newcommand{\source}[1]{\caption*{Source: {#1}} }
+
+\begin{figure}[h]
+\caption{Bezugsebene des Websurvey}
+  \centering
+     \includegraphics[width=.9\textwidth]{Verbundebene.png}\linebreak
+  \textit{Quelle: Eigene Darstellung, in Anlehnung an Defila et al. (ref:defila)}
+  \label{fig:Schimank}
+\end{figure}
 
 
-Here some text about diamonds.
 
 ## Analysis
 

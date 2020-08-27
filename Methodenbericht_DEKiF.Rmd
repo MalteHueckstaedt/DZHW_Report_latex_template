@@ -1,6 +1,6 @@
 ---
-title: "Websurvey des Verbundprojektes Determinanten und Effekte von Kooperation in homogenen und heterogenen Forschungsverbünden (DEKiF)"
-short-title: "Vorläufiger Daten- und Methodenbericht"
+title: "Determinanten und Effekte von Kooperation in homogenen und heterogenen Forschungsverbünden (DEKiF)"
+short-title: "Vorl. Daten- und Methodenbericht des Websurveys"
 author:
 - Malte Hückstädt
 - Luca Marie Leisten
@@ -28,23 +28,26 @@ output:
 
 # Studienüberblick
 
-Das Verbundprojekt DEKIF untersucht, welche internen Kooperationsprobleme in Forschungsverbünden auftreten, welche Ursachen und Rahmenbedingungen dafür maßgeblich sind und wie sich die Probleme auf Erfolg und die Produktivität von Forschungsverbünden auswirken. Weiterhin werden die Strategien ermittelt, die Forschungsverbünde anwenden, um die auftretenden Probleme zu lösen oder bereits im Vorfeld zu vermeiden.
+Das Verbundprojekt *Determinanten und Effekte von Kooperation in homogenen und heterogenen Forschungsverbünden* (DEKiF) untersucht, welche internen Kooperationsprobleme in Forschungsverbünden auftreten, welche Ursachen und Rahmenbedingungen dafür maßgeblich sind und wie sich die Probleme auf Erfolg und die Produktivität von Forschungsverbünden auswirken. Weiterhin werden die Strategien ermittelt, die Forschungsverbünde anwenden, um die auftretenden Probleme zu lösen oder bereits im Vorfeld zu vermeiden.
 
-Die Studie folgt einem triangulierenden Mixed Methods-Design [vgl. @flickTriangulationEinfuehrung2011]: Sie setzt sich zusammen aus einer explorativen Fallstudie, einem quantitativen Survey, bibliometrischen Analysen sowie vertiefenden Fallstudien in verschiedenen Untersuchungsfeldern.
+\vspace{3 mm}
 
-Das Projekt DEKiF wird vom Bundesministerium für Bildung und Forschung (BMBF) bis 2022 gefördert. Seine Durchführung erfolgt in einer Kooperation zwischen dem DZHW (Abteilungen Governance in Hochschule und Wissenschaft und Forschungssystem und Wissenschaftsdynamik), der Heinrich-Heine-Universität Düsseldorf (Prof. Dr. Gerhard Vowe) und dem Stifterverband für die Deutsche Wissenschaft (Dr. Mathias Winde).
+Die Studie folgt einem triangulierenden Mixed Methods-Design [ @flickTriangulationEinfuehrung2011]: Sie setzt sich so zusammen aus einer explorativen Fallstudie, einem quantitativen Survey, bibliometrischen Analysen sowie vertiefenden Fallstudien in verschiedenen Untersuchungsfeldern.
 
+\vspace{3 mm}
+
+Das Verbundprojekt DEKiF wird vom *Bundesministerium für Bildung und Forschung* (BMBF) bis 2022 gefördert. Seine Durchführung erfolgt in einer Kooperation zwischen dem DZHW (Abteilungen Governance in Hochschule und Wissenschaft und Forschungssystem und Wissenschaftsdynamik), der Heinrich-Heine-Universität Düsseldorf und dem Stifterverband für die Deutsche Wissenschaft.
 
 ## Websurvey
 
-Im Rahmen des Websurvey des Verbundprojekts DEKiF werden (1) die Prozesse der Zusammenarbeit in DFG-Forschungsverbünden, (2) die dabei auftretenden Probleme sowie (3) die subjektive Einschätzung des Erfolgs des Verbundes aus Sicht der Befragten untersuchen. Die Prozesse, auftretende Probleme und Erfolgseinschätzungen werden dabei zu den Rahmenbedingungen (z.B. der personellen, räumlichen oder fachlichen Heterogenität) von Forschungsverbünden in Beziehung gesetzt. Forschungsfragen des Websurveys sind also:
+Im Rahmen des Websurvey [@callegaroWebSurveyMethodology2015 ] des Verbundprojekts DEKiF werden (1) die Prozesse der Zusammenarbeit in DFG-Forschungsverbünden, (2) die dabei auftretenden Probleme sowie (3) die subjektive Einschätzung des Erfolgs des Verbundes aus Sicht der Befragten untersuchen. Die Prozesse, auftretende Probleme und Erfolgseinschätzungen werden dabei zu den Rahmenbedingungen (z.B. der personellen, räumlichen oder fachlichen Heterogenität) von Forschungsverbünden in Beziehung gesetzt. Forschungsfragen des Websurveys sind also:
 
 - Welchen Effekt üben verschiedene Prozesse und Formen der Verbundarbeit auf die Eintrittswahrscheinlichkeit und die Intensität von Kooperationsproblemen aus?
 - Wie wirken sich die verschiedenen Prozesse und Formen der Verbundarbeit auf die subjektiv eingeschätzten Erfolgschancen der Zusammenarbeit aus?
 - Welchen Effekt üben auftretende Kooperationsprobleme auf die subjektiv eingeschätzten Erfolgschancen der Zusammenarbeit aus?
 - Wie wirken sich die Rahmenbedingungen von Forschungsverbünden auf den operativen Betrieb, die Eintrittswahrscheinlichkeit und die Intensität verschiedener Arten von Kooperationsproblemen sowie auf die eingeschätzten Erfolgschancen der Zusammenarbeit aus?
 
-Themenblöcke der ca. 15-minütigen Befragung sind des Weiteren:
+\noindent Themenblöcke der ca. 15-minütigen Befragung sind des Weiteren:
 
 - Initiierung und Auswahl der Verbundmitglieder
 - Disziplinäre/disziplinübergreifende Formen der Verbundarbeit

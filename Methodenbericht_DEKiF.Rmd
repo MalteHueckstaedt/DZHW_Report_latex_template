@@ -1,13 +1,16 @@
 ---
-title: "Determinanten und Effekte von Kooperation in homogenen und heterogenen Forschungsverbünden"
-short-title: "Daten- und Methodenbericht des quantitativen Websurveys"
+title: "Websurvey des Verbundprojektes Determinanten und Effekte von Kooperation in homogenen und heterogenen Forschungsverbünden (DEKiF)"
+short-title: "Vorläufiger Daten- und Methodenbericht"
 author:
 - Malte Hückstädt
 - Luca Marie Leisten
 date: "August 2020"
 doc-type: "Daten- und Methodenbericht"
 lang: de
+link-citations: yes
+linkcolor: blue
 bibliography: Bibliography.bib
+csl: hochschule-munchen-fakultat-fur-angewandte-sozialwissenschaften.csl
 editor_options:
   chunk_output_type: console
 output:
@@ -17,30 +20,63 @@ output:
     toc_depth: 5
     keep_tex: false
     template: latex_template_de.tex
-    latex_engine: lualatex
-    citation_package: biblatex
+    latex_engine: xelatex
     number_sections: false
   # bookdown::word_document2:
   #   fig_caption: yes
 ---
 
-# Motivation
+# Studienüberblick
+
+Das Verbundprojekt DEKIF untersucht, welche internen Kooperationsprobleme in Forschungsverbünden auftreten, welche Ursachen und Rahmenbedingungen dafür maßgeblich sind und wie sich die Probleme auf Erfolg und die Produktivität von Forschungsverbünden auswirken. Weiterhin werden die Strategien ermittelt, die Forschungsverbünde anwenden, um die auftretenden Probleme zu lösen oder bereits im Vorfeld zu vermeiden.
+
+Die Studie folgt einem triangulierenden Mixed Methods-Design [vgl. @flickTriangulationEinfuehrung2011]: Sie setzt sich zusammen aus einer explorativen Fallstudie, einem quantitativen Survey, bibliometrischen Analysen sowie vertiefenden Fallstudien in verschiedenen Untersuchungsfeldern.
+
+Das Projekt DEKiF wird vom Bundesministerium für Bildung und Forschung (BMBF) bis 2022 gefördert. Seine Durchführung erfolgt in einer Kooperation zwischen dem DZHW (Abteilungen Governance in Hochschule und Wissenschaft und Forschungssystem und Wissenschaftsdynamik), der Heinrich-Heine-Universität Düsseldorf (Prof. Dr. Gerhard Vowe) und dem Stifterverband für die Deutsche Wissenschaft (Dr. Mathias Winde).
+
+
+## Websurvey
+
+Im Rahmen des Websurvey des Verbundprojekts DEKiF werden (1) die Prozesse der Zusammenarbeit in DFG-Forschungsverbünden, (2) die dabei auftretenden Probleme sowie (3) die subjektive Einschätzung des Erfolgs des Verbundes aus Sicht der Befragten untersuchen. Die Prozesse, auftretende Probleme und Erfolgseinschätzungen werden dabei zu den Rahmenbedingungen (z.B. der personellen, räumlichen oder fachlichen Heterogenität) von Forschungsverbünden in Beziehung gesetzt. Forschungsfragen des Websurveys sind also:
+
+- Welchen Effekt üben verschiedene Prozesse und Formen der Verbundarbeit auf die Eintrittswahrscheinlichkeit und die Intensität von Kooperationsproblemen aus?
+- Wie wirken sich die verschiedenen Prozesse und Formen der Verbundarbeit auf die subjektiv eingeschätzten Erfolgschancen der Zusammenarbeit aus?
+- Welchen Effekt üben auftretende Kooperationsprobleme auf die subjektiv eingeschätzten Erfolgschancen der Zusammenarbeit aus?
+- Wie wirken sich die Rahmenbedingungen von Forschungsverbünden auf den operativen Betrieb, die Eintrittswahrscheinlichkeit und die Intensität verschiedener Arten von Kooperationsproblemen sowie auf die eingeschätzten Erfolgschancen der Zusammenarbeit aus?
+
+Themenblöcke der ca. 15-minütigen Befragung sind des Weiteren:
+
+- Initiierung und Auswahl der Verbundmitglieder
+- Disziplinäre/disziplinübergreifende Formen der Verbundarbeit
+- Disziplinäre/disziplinübergreifende Kommunikation im Verbund
+- Entwicklung gemeinsamer Forschungsfragen und Verbundziele
+- Voraussetzungen bzw. Verfahren für die Integration von Forschungsergebnissen
+- Leitung und Koordination des Verbundes
+- Entscheidungsverfahren
+- Zusammenarbeit im Verbund
+- Probleme im Verbund
+- Erfolg der Verbundarbeit
+- Best Practice künftiger Verbundarbeit
+- Persönliche Erwartungen an die Mitwirkung im Forschungsverbund
+- Bedingungen des Forschungsverbundes
+- Demografie
+
+Der inhaltliche Bezugspunkt des Websurveys ist die Kooperation auf Verbundebene, also die Zusammenarbeit zwischen der Verbundleitung (Sprecher\*in) und den Principal Investigators (Teilprojektleiter\*innen/Antragsteller\*innen). Die Zusammenarbeit innerhalb der Teilprojekte ist nicht Gegenstand der Befragung.
+
+Unter Verbundebene wird im Rahmen des Websurveys jene Ebene von Forschungsverbünden verstanden, auf der die Verbundleitung (Sprecher\*in) und die Principal Investigator (Teilprojektleiter\*innen/Antragsteller\*innen) teilprojektübergreifend an der Erreichung der gemeinsamen Verbundziele arbeiten.
+
+Die nachfolgende Darstellung veranschaulicht schematisch den Zusammenhang zwischen verschiedenen Statusgruppen von Verbundmitgliedern, Teilprojekten und der Verbundebene eines Forschungsverbundes.
+
 
 Here some text about diamonds.
 
 ## Analysis
 
 
-### Erstellung eigener Funktionen
+\newpage
 
-Da keine kompakte R-Funktion für die Fusionierung redundanter Spaltenvektoren besteht, die Spaltenvektoren fusioniert, die fusionierte Variable umbenennt sowie die Ursprungsvariablen aus dem Datensatz entfernt, wird eine entsprechende Funktion im folgenden selbst geschrieben. Diese Funktion soll konkret folgende Subfunktionen aufweisen:
-
-1. Die `NA`s zweier Spaltenvektoren werden durch leere Strings ersetzt.
-
-2. Diese beiden Spaltenvektoren werden mittels paste-Funktion zusammengezogen zu einem neuen Spaltenvektor, welchem ein neuer Name (Variablenname) gegeben werden kann.
-
-3. Die neue Variable wird an den Input-Dateframe gemerget.
-
-Diese Funktion wird für den Fall geschrieben, dass zwei (`unite_col`), drei (`unite_col_3`) oder vier drei (`unite_col_4`) Spaltenvektoren zusammengezogen werden sollen.
-
-# References
+# Literatur {-#literatur}
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.2in}
+\setlength{\parskip}{0pt}
+\noindent

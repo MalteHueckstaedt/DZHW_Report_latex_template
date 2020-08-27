@@ -2,7 +2,7 @@
 \documentclass[a4paper,10pt]{article}
 \renewcommand*\MakeUppercase[1]{#1}
 \usepackage[export]{adjustbox}
-
+\usepackage{stackengine}
 \usepackage{csquotes}
 % use Calibri system font:
 \usepackage{fontspec}
@@ -55,9 +55,9 @@ $endif$
 \rhead{\leftmark}
 \lfoot{\setlength{\unitlength}{1mm}
             \begin{picture}(0,0)
-            \put(0,0){\includegraphics[width=2.4cm,valign=c]{fdz-logo_ohne_text_dt.png}}
+            \put(0,0){\includegraphics[width=2.4cm,valign=C]{fdz-logo_ohne_text_dt.png}}
             \end{picture}}
-\rfoot{$short-title$ | \thepage}
+\rfoot{\raisebox{.4ex}{$short-title$ | \thepage}}
 
 \usepackage[unicode=true]{hyperref}
 \hypersetup{breaklinks=true,

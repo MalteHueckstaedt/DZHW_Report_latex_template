@@ -169,23 +169,23 @@ df <- df %>% filter(!str_detect(DFG_Verf,"Graduiertenkollegs|Graduiertenschulen|
 df <- df %>% filter(Researcher_Role!="Beteiligte Person")
 #rekodiere eineindeutig Rolle der Zielperson in Sprecher | Teilprojektleiter
 df$Researcher_Role <- df$Researcher_Role %>%
-  recode("Antragsteller"= "Teilprojektleiter/Antragsteller",
-         "Auslädnischer Sprecher/Antragsteller"= "Teilprojektleiter/Antragsteller",
-         "Ausländische Sprecher/Antragsteller"= "Teilprojektleiter/Antragsteller",
-         "ausländischer Sprecher/Antragsteller"= "Teilprojektleiter/Antragsteller",
-         "Ausländischer Sprecher/Antragsteller"= "Teilprojektleiter/Antragsteller",
-         "AusländischerSprecher/Antragsteller"= "Teilprojektleiter/Antragsteller",
-         "Gastgeber/Antragsteller"= "Teilprojektleiter/Antragsteller",
-         "Leiter/Antragsteller"= "Sprecher",
-         "Sprecher & Teilprojektleiter"= "Sprecher",
-         "Sprecher/Antragsteller"="Sprecher",
-         "Stellvertreter/Antragsteller"="Teilprojektleiter/Antragsteller",
-         "Teilprojektleiter"="Teilprojektleiter/Antragsteller",
-         "Stellvertretender Sprecher"="Sprecher",
-         "stellvertretender Sprecher/Antragsteller"="Teilprojektleiter/Antragsteller")
+  recode("Antragsteller"= "Teilprojektleiter*in/Antragsteller*in",
+         "Auslädnischer Sprecher/Antragsteller"= "Teilprojektleiter*in/Antragsteller*in",
+         "Ausländische Sprecher/Antragsteller"= "Teilprojektleiter*in/Antragsteller*in",
+         "ausländischer Sprecher/Antragsteller"= "Teilprojektleiter*in/Antragsteller*in",
+         "Ausländischer Sprecher/Antragsteller"= "Teilprojektleiter*in/Antragsteller*in",
+         "AusländischerSprecher/Antragsteller"= "Teilprojektleiter*in/Antragsteller*in",
+         "Gastgeber/Antragsteller"= "Teilprojektleiter*in/Antragsteller*in",
+         "Leiter/Antragsteller"= "Sprecher*in",
+         "Sprecher & Teilprojektleiter"= "Sprecher*in",
+         "Sprecher/Antragsteller"="Sprecher*in",
+         "Stellvertreter/Antragsteller"="Teilprojektleiter*in/Antragsteller*in",
+         "Teilprojektleiter"="Teilprojektleiter*in/Antragsteller*in",
+         "Stellvertretender Sprecher"="Sprecher*in",
+         "stellvertretender Sprecher/Antragsteller"="Teilprojektleiter*in/Antragsteller*in")
 #Filtere Sprecher, gruppiere anhand "ID", ziehe, falls mehr als eine Zeile (Wenn eine ID mehr als 1x vorkommt) Zufallssample von n=1
 set.seed(123) # sorgt für konstantes Zufallssample
-Sprecher <- df %>% filter(Researcher_Role=="Sprecher") %>% group_by(ID) %>% sample_n(1)
+Sprecher <- df %>% filter(Researcher_Role=="Sprecher*in") %>% group_by(ID) %>% sample_n(1)
 
 #Schreibe "Researcher_Name" der oben per Zufall gezogenen Sprecher in das Objekt "Str_Name_Sprecher"
 Str_Name_Sprecher <- Sprecher$Researcher_Name

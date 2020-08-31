@@ -44,7 +44,7 @@ output:
 
 # Einleitung
 
-Dieser vorläufige Daten- und Methodenbericht ist vorläufig und wurde vor der am 15.09.2020 beginnenden Feldphase des Websurveys erstellt. Informationen zum (bisherigen) Rücklauf, zur Repräsentativität sowie zu etwaigen Gewichtungsverfahren der gewonnenen Daten können an dieser Stelle deshalb  nicht erfolgen. Wohl wird aber (1) ein kurzer Überblick über das Verbundprojekt  *Determinanten und Effekte von Kooperation in homogenen und heterogenen Forschungsverbünden* (DEKiF) erfolgen. Weiterhin werden (2) Inhalt und Fragestellung des eingebetteten Websurveys kurz vorgestellt, so wie (3) die aniviserte Grundgesamtheit dargestellt. 
+Dieser vorläufige Daten- und Methodenbericht wurde vor der am 15.09.2020 beginnenden Feldphase des Websurveys erstellt. Informationen zum (bisherigen) Rücklauf, zur Repräsentativität sowie zu etwaigen Gewichtungsverfahren der gewonnenen Daten können an dieser Stelle deshalb  nicht erfolgen. Wohl wird aber (1) ein kurzer Überblick über das Verbundprojekt  *Determinanten und Effekte von Kooperation in homogenen und heterogenen Forschungsverbünden* (DEKiF) erfolgen. Weiterhin werden (2) Inhalt und Fragestellung des eingebetteten Websurveys kurz vorgestellt, so wie (3) die aniviserte Grundgesamtheit dargestellt.
 
 # Studienüberblick
 
@@ -60,7 +60,7 @@ Das Verbundprojekt DEKiF wird vom *Bundesministerium für Bildung und Forschung*
 
 # Websurvey
 
-Im Rahmen des Websurvey [@callegaroWebSurveyMethodology2015 ] des Verbundprojekts DEKiF werden (1) die Prozesse der Zusammenarbeit in DFG-Forschungsverbünden, (2) die dabei auftretenden Probleme sowie (3) die subjektive Einschätzung des Erfolgs des Verbundes aus Sicht der Befragten untersuchen. Die Prozesse, auftretende Probleme und Erfolgseinschätzungen werden dabei zu den Rahmenbedingungen (z.B. der personellen, räumlichen oder fachlichen Heterogenität) von Forschungsverbünden in Beziehung gesetzt. Forschungsfragen des Websurveys sind also:
+Im Rahmen des Websurveys [@callegaroWebSurveyMethodology2015 ] des Verbundprojekts DEKiF werden (1) die Prozesse der Zusammenarbeit in DFG-Forschungsverbünden, (2) die dabei auftretenden Probleme sowie (3) die subjektive Einschätzung des Erfolgs des Verbundes aus Sicht der Befragten untersucht. Die Prozesse, auftretende Probleme und Erfolgseinschätzungen werden dabei zu den Rahmenbedingungen (z.B. der personellen, räumlichen oder fachlichen Heterogenität) von Forschungsverbünden in Beziehung gesetzt. Forschungsfragen des Websurveys sind also:
 
 - Welchen Effekt üben verschiedene Prozesse und Formen der Verbundarbeit auf die Eintrittswahrscheinlichkeit und die Intensität von Kooperationsproblemen aus?
 - Wie wirken sich die verschiedenen Prozesse und Formen der Verbundarbeit auf die subjektiv eingeschätzten Erfolgschancen der Zusammenarbeit aus?
@@ -92,9 +92,9 @@ after={}]
     \item Leitung und Koordination des Verbundes
     \item Praktizierte Entscheidungsverfahren
     \item Zusammenarbeit im Verbund
-    \item Probleme im Zusammenhang mit der Verbundarbeit
-    \item Erfolg der Verbundarbeit
-    \item Best Practice von Verbundarbeit
+    \item Probleme im Zusammenhang mit der gemeinsamen Verbundarbeit
+    \item Erfolg der gemeinsamen Verbundarbeit
+    \item Best Practice gemeinsamer Verbundarbeit
     \item Persönliche Erwartungen an die Mitwirkung im Forschungsverbund
     \item Randbedingungen des Forschungsverbundes
     \item Demografie
@@ -106,7 +106,7 @@ after={}]
 
 \vspace{3 mm}
 
-Der inhaltliche Bezugspunkt des Websurveys ist die Kooperation auf Verbundebene, also die Zusammenarbeit zwischen der Verbundleitung (Sprecher\*in) und den Principal Investigators (Teilprojektleiter\*innen/Antragsteller\*innen). Die Zusammenarbeit innerhalb der Teilprojekte ist nicht Gegenstand der Befragung.
+Der inhaltliche Bezugspunkt des Websurveys ist die Kooperation auf Verbundebene, also die Zusammenarbeit zwischen der Verbundleitung (Sprecher\*in) und den Principal Investigators (Teilprojektleiter\*innen/Antragsteller\*innen). Die Zusammenarbeit innerhalb der Teilprojekte ist hingegen nicht Gegenstand der Befragung.
 
 \vspace{3 mm}
 
@@ -128,14 +128,14 @@ Unter Verbundebene wird im Rahmen des Websurveys jene Ebene von Forschungsverbü
 
 # Grundgesamtheit
 
-Im Mittelpunkt der Befragung stehen als Untersuchungseinheiten n=15.705 (siehe Tabelle 1 und 2) an Forschungsverbünden der Förderlinien *koordinierte Programme* sowie der Förderlinie *Exzellenzcluster* beteiligte Sprecher\*innen und Principal Investigator. Anvisiert werden so mittels des Websurveys weiterhin laufende und nach 2015 beendete Verbünde der Förderlinien der _Forschungsgruppen_ [@deutscheforschungsgemeinschaftMerkblattForschungsgruppenDFGVordruck2018a],
+Im Mittelpunkt der Befragung stehen als Untersuchungseinheiten n=15.705 an Forschungsverbünden der Förderlinien *koordinierte Programme* sowie der Förderlinie *Exzellenzcluster* beteiligte Sprecher\*innen und Principal Investigator (vgl. Tabelle 1 und 2). Anvisiert werden so mittels des Websurveys weiterhin laufende und nach 2015 beendete Verbünde der Förderlinien der _Forschungsgruppen_ [@deutscheforschungsgemeinschaftMerkblattForschungsgruppenDFGVordruck2018a],
 _Forschungszentren_ [@deutscheforschungsgemeinschaftMerkblattForschungszentrenDFGVordruck2010],
 _Sonderforschungsbereiche_[@deutscheforschungsgemeinschaftMerkblattSonderforschungsbereicheDFGVordruck2018], _Transregios_[ @deutscheforschungsgemeinschaftMerkblattSonderforschungsbereicheDFGVordruck2018], _Schwerpunktprogramme_ [@deutscheforschungsgemeinschaftMerkblattSchwerpunktprogrammDFGVordruck2015] und
 _Exzellenzcluster_ [@deutscheforschungsgemeinschaftExzellenzcluster200520172016; @deutscheforschungsgemeinschaftForderlinieExzellenzclusterExzellenzstrategieMerkblatt2019].
 
-Diese Zielpopulation birgt für das Verbundprojekt DEKiF verschiedene Vorteile: Unter den anvisierten Förderlinien firmieren deutschlandweit angesiedelte Forschungsverbünde, welche sich (auf Verbundebene) aus Wissenschaftler\*innen aller Fachdisziplinen zusammensetzen und gleichzeitig eine maximale thematische Bandbreite aufweisen [vgl. @deutscheforschungsgemeinschaftForderatlas20182018,63,93; @deutscheforschungsgemeinschaftErhebungenKoordiniertenProgrammen2019,11]. Weiterhin variieren die anvisierten Verbünde stark in ihrer personellen, fachlichen und räumlichen Heterogenität. Dieser Umstand erlaubt es, die gewonnenen Befragungsdaten nicht nur über Förderlinien hinweg, sondern weiterhin anhand der vorgenannten Heterogenitätsdimensionen zu vergleichen.
+Diese Zielpopulation birgt für den Websurvey des Verbundprojektes DEKiF verschiedene Vorteile: Unter den anvisierten Förderlinien firmieren deutschlandweit angesiedelte Forschungsverbünde, welche sich (auf Verbundebene) aus Wissenschaftler\*innen aller Fachdisziplinen zusammensetzen und gleichzeitig eine maximale thematische Bandbreite aufweisen [vgl. @deutscheforschungsgemeinschaftForderatlas20182018,63,93; @deutscheforschungsgemeinschaftErhebungenKoordiniertenProgrammen2019,11]. Weiterhin variieren die anvisierten Verbünde stark in ihrer personellen, fachlichen und räumlichen Heterogenität. Dieser Umstand erlaubt es, die gewonnenen Befragungsdaten nicht nur über Förderlinien hinweg, sondern weiterhin anhand der vorgenannten Heterogenitätsdimensionen zu vergleichen.
 
-Schließlich liegt eine durch die Datenbank GEPRIS bereitgestellte, vollständige Liste aller in der Grundgesamtheit befindlichen Untersuchungselemente (PIs und Sprecher\*innen der anvisierten Verbünde) vor. Diese bildet die Grundlage für spätere, belastbare, inferenzstatistische Datenanalysen sowie Unit- und Item-Non-Response-Analysen.
+Schließlich liegt eine durch die Datenbank GEPRIS bereitgestellte, vollständige Liste aller in der Grundgesamtheit befindlichen Untersuchungselemente (Principal Investigators und Sprecher\*innen der anvisierten Verbünde) vor. Diese bildet die Grundlage für spätere, belastbare, inferenzstatistische Datenanalysen sowie Unit- und Item-Non-Response-Analysen.
 
 ```{r message=FALSE, warning=FALSE, include=FALSE}
 #lade nötige Pakete und Datensatz

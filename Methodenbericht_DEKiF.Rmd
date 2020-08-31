@@ -29,6 +29,7 @@ output:
 \pagenumbering{gobble}
 \tableofcontents
 
+
 \newpage
 \pagenumbering{Roman}
 \listoffigures

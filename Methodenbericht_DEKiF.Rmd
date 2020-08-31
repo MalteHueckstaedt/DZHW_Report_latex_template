@@ -44,11 +44,11 @@ output:
 
 # Einleitung
 
-
+Dieser vorläufige Daten- und Methodenbericht ist vorläufig und wurde vor der am 15.09.2020 beginnenden Feldphase des Websurveys erstellt. Informationen zum (bisherigen) Rücklauf, zur Repräsentativität sowie zu etwaigen Gewichtungsverfahren der gewonnenen Daten können an dieser Stelle deshalb  nicht erfolgen. Wohl wird aber (1) ein kurzer Überblick über das Verbundprojekt  *Determinanten und Effekte von Kooperation in homogenen und heterogenen Forschungsverbünden* (DEKiF) erfolgen. Weiterhin werden (2) Inhalt und Fragestellung des eingebetteten Websurveys kurz vorgestellt, so wie (3) die aniviserte Grundgesamtheit dargestellt. 
 
 # Studienüberblick
 
-Das Verbundprojekt *Determinanten und Effekte von Kooperation in homogenen und heterogenen Forschungsverbünden* (DEKiF) untersucht, welche internen Kooperationsprobleme in Forschungsverbünden auftreten, welche Ursachen und Rahmenbedingungen dafür maßgeblich sind und wie sich die Probleme auf Erfolg und die Produktivität von Forschungsverbünden auswirken. Weiterhin werden die Strategien ermittelt, die Forschungsverbünde anwenden, um die auftretenden Probleme zu lösen oder bereits im Vorfeld zu vermeiden.
+Das Verbundprojekt DEKiF untersucht, welche internen Kooperationsprobleme in Forschungsverbünden auftreten, welche Ursachen und Rahmenbedingungen dafür maßgeblich sind und wie sich die Probleme auf Erfolg und die Produktivität von Forschungsverbünden auswirken. Weiterhin werden die Strategien ermittelt, die Forschungsverbünde anwenden, um die auftretenden Probleme zu lösen oder bereits im Vorfeld zu vermeiden.
 
 \vspace{3 mm}
 

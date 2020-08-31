@@ -6,10 +6,9 @@
 !spec/*.DS_Store
 .DS_Store
 *.tmp
+*.log
 ~$*.doc*
 ~$*.xls*
 *.xlk
 ~$*.ppt*
 *.~vsd*
-~$ib2016_Method_Report.docx
-Methodenbericht_DEKiF.log

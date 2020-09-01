@@ -44,7 +44,7 @@ output:
 
 # Einleitung
 
-Dieser vorläufige Daten- und Methodenbericht wurde vor der am 15.09.2020 beginnenden Feldphase des Websurveys erstellt. Informationen zum (bisherigen) Rücklauf, zur Repräsentativität sowie zu etwaigen Gewichtungsverfahren der gewonnenen Daten können an dieser Stelle deshalb  nicht erfolgen. Wohl wird aber (1) ein kurzer Überblick über das Verbundprojekt  *Determinanten und Effekte von Kooperation in homogenen und heterogenen Forschungsverbünden* (DEKiF) erfolgen. Weiterhin werden (2) Inhalt und Fragestellung des eingebetteten Websurveys kurz vorgestellt, so wie (3) die aniviserte Grundgesamtheit dargestellt.
+Dieser vorläufige Daten- und Methodenbericht wurde vor der am 15.09.2020 beginnenden Feldphase des Websurveys erstellt. Informationen zum (bisherigen) Rücklauf, zur Repräsentativität sowie zu etwaigen Gewichtungsverfahren der gewonnenen Daten können an dieser Stelle deshalb  nicht erfolgen. Wohl wird aber (1) ein kurzer Überblick über das Verbundprojekt  *Determinanten und Effekte von Kooperation in homogenen und heterogenen Forschungsverbünden* (DEKiF) erfolgen. Weiterhin werden (2) Inhalt und Fragestellung des eingebetteten Websurveys kurz vorgestellt, so wie (3) die anvisierte Grundgesamtheit dargestellt.
 
 # Studienüberblick
 

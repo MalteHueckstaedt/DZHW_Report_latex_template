@@ -29,17 +29,16 @@ output:
 \pagenumbering{gobble}
 \tableofcontents
 
-
-\newpage
+\cleardoublepage
 \pagenumbering{Roman}
 \listoffigures
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}
 
-\newpage
+\cleardoublepage
 \listoftables
 \addcontentsline{toc}{section}{Tabellenverzeichnis}
 
-\newpage
+\cleardoublepage
 \pagenumbering{arabic}
 
 
@@ -289,14 +288,14 @@ kable(Tab_Ende, "latex", booktabs = T,
 kable_styling("striped", full_width = F) %>%
   row_spec(7, bold = T) %>%
   column_spec(4, bold = T) %>%
-kable_styling(latex_options = "HOLD_position")
+kable_styling(latex_options = "HOLD_position",font_size = 8)
 
 kable(Tab_Lauf, "latex", booktabs = T,
   linesep = "", caption = 'Verteilung von Sprecher*innen und Principal Investigators laufender Verbünde in der Grundgesamtheit',format.args = list(big.mark = ".")) %>%
 kable_styling("striped", full_width = F) %>%
   row_spec(8, bold = T) %>%
   column_spec(4, bold = T) %>%
-kable_styling(latex_options = "HOLD_position")
+kable_styling(latex_options = "HOLD_position",font_size = 8)
 
 ```
 

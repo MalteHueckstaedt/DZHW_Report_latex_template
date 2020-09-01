@@ -1,17 +1,19 @@
 % partially adapated from pandoc latex template by Rmarkdown
-\documentclass[a4paper,10pt,twoside,cleardoubleempty]{article}
+\documentclass[a4paper,10pt,twoside]{article}
 \renewcommand*\MakeUppercase[1]{#1}
 \usepackage[export]{adjustbox}
 \usepackage[font=footnotesize,labelfont=bf]{caption}
 \usepackage{stackengine}
 \usepackage{tcolorbox}
+\usepackage{emptypage}
 \usepackage{enumitem}
 \usepackage{csquotes}
-
 \usepackage{placeins}
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{color}
+\usepackage{titletoc}
+\dottedcontents{section}[1.5em]{\mdseries}{1.3em}{.6em}
 \usepackage{colortbl}
 \usepackage{float}
 % use Calibri system font:
@@ -30,8 +32,7 @@
 \usepackage{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 % set DZHW margins:
-%\usepackage[left=4cm, right=2.5cm, top=1cm, bottom=1cm]{geometry}
-\usepackage[top=2cm,bottom=2cm,left=2cm,right=4cm,includeheadfoot]{geometry}
+\usepackage[top=2cm,bottom=2cm,outer=4cm,inner=2cm,includeheadfoot]{geometry}
 
 % get language from rmarkdown
 $if(lang)$
@@ -73,7 +74,7 @@ $endif$
             colorlinks=true,
             citecolor=DZHWblue,
             urlcolor=DZHWblue,
-            linkcolor=DZHWblue,
+            linkcolor=black,
             pdfborder={0 0 0}}
 \urlstyle{same}  % don't use monospace font for urls
 % provide a tightlist as required by pandoc:
@@ -94,13 +95,15 @@ $endif$
 \let\rmarkdownfootnote\footnote%
 \def\footnote{\protect\rmarkdownfootnote}
 % titling to modify title page:
+\newgeometry{total={21cm,29.7cm}, left=4cm, right=2.5cm, top=1cm, bottom=1.5cm,includeheadfoot}
+
 \usepackage{titling}
 \pretitle{\vspace{2cm}
         \vfill
         \flushleft%
         \LARGE
         $for(author)$$author$$sep$ / $endfor$ \\
-        \vspace{0.75cm}%
+        \vspace{0.0cm}%
         \Huge
         }
 \posttitle{\flushleft%
@@ -112,15 +115,22 @@ $endif$
         $endif$}
 \predate{\vfill
         \flushright
+        \hspace*{-2cm}
         \huge\textbf{$doc-type$}\\
         \LARGE $date$
-        \flushleft}
+        \flushright}
 \postdate{%
-        \hspace*{-6cm}\includegraphics[width=18.36cm]{DZHW_blue_bar.png}\\
-        \vspace{0.5cm}
-        \hspace*{3cm}\includegraphics[width=10.7cm]{BMBF_FDZ.png}%
+        \flushleft
+        \hspace*{-4cm}\includegraphics[width=20cm]{DZHW_blue_bar.png}\\
+        \vspace{0.7cm}
+        \hspace*{-1.5cm}\includegraphics[width=15.7cm]{BMBF_FDZ.png}\\
+        \vspace{-1.5cm}
 
     }
+
+\usepackage{sectsty}
+\chapterfont{\color{DZHWblue}}  % sets colour of chapters
+\sectionfont{\color{DZHWblue}}
 
 % start actual document:
 \begin{document}
@@ -135,10 +145,12 @@ $endif$
 \date{} % We don't use the latex command for the date
 % title page:
 \maketitle\thispagestyle{empty}
+\restoregeometry
 % impressum
-\newpage
-%\thispagestyle{empty}
-% \newgeometry{left=2.2cm, right=4.8cm, headsep=1.6cm, headheight=0.75cm, top=1.25cm, bottom=2.6cm, footskip=1.4cm, textheight=23.5cm,includehead}
+\cleardoublepage
+\pagenumbering{gobble}
+
+
 \null\vfill
 \footnotesize
 \noindent\textbf{Herausgeber:}\\
@@ -161,21 +173,9 @@ Bedingungen 3.0 Deutschland Lizenz“ (CC‐BY‐NC‐SA)\\
 \\
 \includegraphics[width=3.33cm]{by-nc-sa.eu.png}
 
-% table of contents
-$if(toc)$
-\newpage
-\thispagestyle{empty}
-\normalsize
-{
-\hypersetup{linkcolor=black}
-\setcounter{tocdepth}{$toc-depth$}
-\tableofcontents
-}
-$endif$
 
 % start main body:
-\newpage
-\clearpage
+\cleardoublepage
 \setcounter{page}{1}
 $body$
 

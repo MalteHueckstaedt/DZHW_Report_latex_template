@@ -110,7 +110,7 @@ Der inhaltliche Bezugspunkt des Websurveys ist die Kooperation auf Verbundebene,
 
 \vspace{3 mm}
 
-Unter Verbundebene wird im Rahmen des Websurveys jene Ebene von Forschungsverbünden verstanden, auf der die Verbundleitung (Sprecher\*in) und die Principal Investigator (Teilprojektleiter*innen/Antragsteller*innen) teilprojektübergreifend an der Erreichung der gemeinsamen Verbundziele arbeiten. Die nachfolgende Darstellung veranschaulicht schematisch den Zusammenhang zwischen verschiedenen Statusgruppen von Verbundmitgliedern, Teilprojekten und der Verbundebene eines Forschungsverbundes.
+Unter Verbundebene wird im Rahmen des Websurveys jene Ebene von Forschungsverbünden verstanden, auf der die Verbundleitung (Sprecher*in) und die Principal Investigator (Teilprojektleiter*innen/Antragsteller*innen) teilprojektübergreifend an der Erreichung der gemeinsamen Verbundziele arbeiten. Die nachfolgende Darstellung veranschaulicht schematisch den Zusammenhang zwischen verschiedenen Statusgruppen von Verbundmitgliedern, Teilprojekten und der Verbundebene eines Forschungsverbundes.
 
 (ref:defila) [-@defilaForschungsverbundmanagementHandbuchFur2006, 28]
 \newcommand{\source}[1]{\caption*{Source: {#1}} }

@@ -106,7 +106,7 @@ after={}]
 
 \vspace{3 mm}
 
-Der inhaltliche Bezugspunkt des Websurveys ist die Kooperation auf Verbundebene, also die Zusammenarbeit zwischen der Verbundleitung (Sprecher\*in) und den Principal Investigators (Teilprojektleiter\*innen/Antragsteller\*innen). Die Zusammenarbeit innerhalb der Teilprojekte ist hingegen nicht Gegenstand der Befragung.
+Der inhaltliche Bezugspunkt des Websurveys ist die Kooperation auf Verbundebene, also die Zusammenarbeit zwischen der Verbundleitung (Sprecher\*in) und den Principal Investigators (Teilprojektleiter*innen/Antragsteller*innen). Die Zusammenarbeit innerhalb der Teilprojekte ist hingegen nicht Gegenstand der Befragung.
 
 \vspace{3 mm}
 

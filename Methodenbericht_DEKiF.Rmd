@@ -106,11 +106,11 @@ after={}]
 
 \vspace{3 mm}
 
-Der inhaltliche Bezugspunkt des Websurveys ist die Kooperation auf Verbundebene, also die Zusammenarbeit zwischen der Verbundleitung (Sprecher\*in) und den Principal Investigators (Teilprojektleiter*innen/Antragsteller*innen). Die Zusammenarbeit innerhalb der Teilprojekte ist hingegen nicht Gegenstand der Befragung.
+Der inhaltliche Bezugspunkt des Websurveys ist die Kooperation auf Verbundebene, also die Zusammenarbeit zwischen der Verbundleitung (Sprecher*in) und den Principal Investigators (Teilprojektleiter*innen/Antragsteller*innen). Die Zusammenarbeit innerhalb der Teilprojekte ist hingegen nicht Gegenstand der Befragung.
 
 \vspace{3 mm}
 
-Unter Verbundebene wird im Rahmen des Websurveys jene Ebene von Forschungsverbünden verstanden, auf der die Verbundleitung (Sprecher\*in) und die Principal Investigator (Teilprojektleiter\*innen/Antragsteller\*innen) teilprojektübergreifend an der Erreichung der gemeinsamen Verbundziele arbeiten. Die nachfolgende Darstellung veranschaulicht schematisch den Zusammenhang zwischen verschiedenen Statusgruppen von Verbundmitgliedern, Teilprojekten und der Verbundebene eines Forschungsverbundes.
+Unter Verbundebene wird im Rahmen des Websurveys jene Ebene von Forschungsverbünden verstanden, auf der die Verbundleitung (Sprecher\*in) und die Principal Investigator (Teilprojektleiter*innen/Antragsteller*innen) teilprojektübergreifend an der Erreichung der gemeinsamen Verbundziele arbeiten. Die nachfolgende Darstellung veranschaulicht schematisch den Zusammenhang zwischen verschiedenen Statusgruppen von Verbundmitgliedern, Teilprojekten und der Verbundebene eines Forschungsverbundes.
 
 (ref:defila) [-@defilaForschungsverbundmanagementHandbuchFur2006, 28]
 \newcommand{\source}[1]{\caption*{Source: {#1}} }
@@ -133,9 +133,9 @@ _Forschungszentren_ [@deutscheforschungsgemeinschaftMerkblattForschungszentrenDF
 _Sonderforschungsbereiche_[@deutscheforschungsgemeinschaftMerkblattSonderforschungsbereicheDFGVordruck2018], _Transregios_[ @deutscheforschungsgemeinschaftMerkblattSonderforschungsbereicheDFGVordruck2018], _Schwerpunktprogramme_ [@deutscheforschungsgemeinschaftMerkblattSchwerpunktprogrammDFGVordruck2015] und
 _Exzellenzcluster_ [@deutscheforschungsgemeinschaftExzellenzcluster200520172016; @deutscheforschungsgemeinschaftForderlinieExzellenzclusterExzellenzstrategieMerkblatt2019].
 
-Diese Zielpopulation birgt für den Websurvey des Verbundprojektes DEKiF verschiedene Vorteile: Unter den anvisierten Förderlinien firmieren deutschlandweit angesiedelte Forschungsverbünde, welche sich (auf Verbundebene) aus Wissenschaftler\*innen aller Fachdisziplinen zusammensetzen und gleichzeitig eine maximale thematische Bandbreite aufweisen [vgl. @deutscheforschungsgemeinschaftForderatlas20182018,63,93; @deutscheforschungsgemeinschaftErhebungenKoordiniertenProgrammen2019,11]. Weiterhin variieren die anvisierten Verbünde stark in ihrer personellen, fachlichen und räumlichen Heterogenität. Dieser Umstand erlaubt es, die gewonnenen Befragungsdaten nicht nur über Förderlinien hinweg, sondern weiterhin anhand der vorgenannten Heterogenitätsdimensionen zu vergleichen.
+Diese Zielpopulation birgt für den Websurvey des Verbundprojektes DEKiF verschiedene Vorteile: Unter den anvisierten Förderlinien firmieren deutschlandweit angesiedelte Forschungsverbünde, welche sich (auf Verbundebene) aus Wissenschaftler*innen aller Fachdisziplinen zusammensetzen und gleichzeitig eine maximale thematische Bandbreite aufweisen [vgl. @deutscheforschungsgemeinschaftForderatlas20182018,63,93; @deutscheforschungsgemeinschaftErhebungenKoordiniertenProgrammen2019,11]. Weiterhin variieren die anvisierten Verbünde stark in ihrer personellen, fachlichen und räumlichen Heterogenität. Dieser Umstand erlaubt es, die gewonnenen Befragungsdaten nicht nur über Förderlinien hinweg, sondern weiterhin anhand der vorgenannten Heterogenitätsdimensionen zu vergleichen.
 
-Schließlich liegt eine durch die Datenbank GEPRIS bereitgestellte, vollständige Liste aller in der Grundgesamtheit befindlichen Untersuchungselemente (Principal Investigators und Sprecher\*innen der anvisierten Verbünde) vor. Diese bildet die Grundlage für spätere, belastbare, inferenzstatistische Datenanalysen sowie Unit- und Item-Non-Response-Analysen.
+Schließlich liegt eine durch die Datenbank GEPRIS bereitgestellte, vollständige Liste aller in der Grundgesamtheit befindlichen Untersuchungselemente (Principal Investigators und Sprecher*innen der anvisierten Verbünde) vor. Diese bildet die Grundlage für spätere, belastbare, inferenzstatistische Datenanalysen sowie Unit- und Item-Non-Response-Analysen.
 
 ```{r message=FALSE, warning=FALSE, include=FALSE}
 #lade nötige Pakete und Datensatz

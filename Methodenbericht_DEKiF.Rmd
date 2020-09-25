@@ -128,7 +128,7 @@ Unter Verbundebene wird im Rahmen des Websurveys jene Ebene von Forschungsverbü
 
 # Grundgesamtheit
 
-Im Mittelpunkt der Befragung stehen als Untersuchungseinheiten n=15.705 an Forschungsverbünden der Förderlinien *koordinierte Programme* sowie der Förderlinie *Exzellenzcluster* beteiligte Sprecher\*innen und Principal Investigator (vgl. Tabelle 1 und 2). Anvisiert werden so mittels des Websurveys weiterhin laufende und nach 2015 beendete Verbünde der Förderlinien der _Forschungsgruppen_ [@deutscheforschungsgemeinschaftMerkblattForschungsgruppenDFGVordruck2018a],
+Im Mittelpunkt der Befragung stehen als Untersuchungseinheiten n=15.595 an Forschungsverbünden der Förderlinien *koordinierte Programme* sowie der Förderlinie *Exzellenzcluster* beteiligte Sprecher\*innen und Principal Investigator (vgl. Tabelle 1 und 2). Anvisiert werden so mittels des Websurveys weiterhin laufende und nach 2015 beendete Verbünde der Förderlinien der _Forschungsgruppen_ [@deutscheforschungsgemeinschaftMerkblattForschungsgruppenDFGVordruck2018a],
 _Forschungszentren_ [@deutscheforschungsgemeinschaftMerkblattForschungszentrenDFGVordruck2010],
 _Sonderforschungsbereiche_[@deutscheforschungsgemeinschaftMerkblattSonderforschungsbereicheDFGVordruck2018], _Transregios_[ @deutscheforschungsgemeinschaftMerkblattSonderforschungsbereicheDFGVordruck2018], _Schwerpunktprogramme_ [@deutscheforschungsgemeinschaftMerkblattSchwerpunktprogrammDFGVordruck2015] und
 _Exzellenzcluster_ [@deutscheforschungsgemeinschaftExzellenzcluster200520172016; @deutscheforschungsgemeinschaftForderlinieExzellenzclusterExzellenzstrategieMerkblatt2019].
@@ -137,7 +137,9 @@ Diese Zielpopulation birgt für den Websurvey des Verbundprojektes DEKiF verschi
 
 Schließlich liegt eine durch die Datenbank GEPRIS bereitgestellte, vollständige Liste aller in der Grundgesamtheit befindlichen Untersuchungselemente (Principal Investigators und Sprecher\*innen der anvisierten Verbünde) vor. Diese bildet die Grundlage für spätere, belastbare, inferenzstatistische Datenanalysen sowie Unit- und Item-Non-Response-Analysen.
 
-```{r message=FALSE, warning=FALSE, include=FALSE}
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
 #lade nötige Pakete und Datensatz
 library(readxl)
 library(tidyverse)
@@ -146,140 +148,35 @@ library(openxlsx)
 library(sjmisc)
 library(kableExtra)
 library(pander)
-df <-read_excel("/Users/maltehueckstaedt/Google Drive/GitHub/AP5/Daten/Datenaufbereitung_AP5/DFG_Aufbereitet210720.xlsx", col_types = rep("text",43))
+df <- read_excel("/Users/maltehueckstaedt/Google Drive/GitHub/AP6/data/final_data/zofar_df.xlsx", col_types = rep("text",12))
 
-# Filtere Verstorbene aus
-df  <- df %>% filter(!str_detect(Researcher_Name, "†"))
-#Verstorben ist weiter  Ulrich Büll: https://github.com/MalteHueckstaedt/AP5/issues/315
-#https://github.com/MalteHueckstaedt/AP5/issues/315#issuecomment-680746986
-df  <- df %>% filter(!str_detect(ID, "17754"))
-df  <- df %>% filter(!str_detect(ID, "9802"))
-# recodiere falsch erfasste Namen:
-df %>% filter(str_detect(Researcher_Name,"Dr. Paolo  Canppele"))
-df$Researcher_Name <- df$Researcher_Name %>%  str_replace_all("Dr. Paolo  Canppele","Dr. Paolo  Caneppele")
-df %>% filter(str_detect(Researcher_Name,"Dr. Paolo  Caneppele"))
 
-df %>% filter(str_detect(Researcher_Name,"Dr. Jaoquin  Mengual Sanchez"))
-df$Researcher_Name <- df$Researcher_Name %>%  str_replace_all("Dr. Jaoquin  Mengual Sanchez","Dr. Jaoquin  Mengual Sanchis")
-df %>% filter(str_detect(Researcher_Name,"Dr. Jaoquin  Mengual Sanchis"))
+df <- df %>% mutate(f_line=case_when(str_detect(verbundname_de, "EXC") ~ "Exzellenzcluster",
+                               str_detect(verbundname_de, "FOR") ~ "Forschungsgruppen",
+                               str_detect(verbundname_de, "FZT") ~ "Forschungszentren",
+                               str_detect(verbundname_de, "SPP") ~ "Schwerpunktprogramme",
+                               str_detect(verbundname_de, "SFB") ~ "Sonderforschungsbereiche",
+                               str_detect(verbundname_de, "TRR") ~ "Transregios"))
 
-# Filtere Förderlinien aus, die nicht Teil der Befragung sind
-df <- df %>% filter(!str_detect(DFG_Verf,"Graduiertenkollegs|Graduiertenschulen|Internationale Graduiertenkollegs|Internationale Graduiertenkollegs|Kolleg-Forschungsgruppen|Klinische Forschungsgruppen"))
 
-df <- df %>% filter(Researcher_Role!="Beteiligte Person")
-#rekodiere eineindeutig Rolle der Zielperson in Sprecher | Teilprojektleiter
-df$Researcher_Role <- df$Researcher_Role %>%
-  recode("Antragsteller"= "Teilprojektleiter*in/Antragsteller*in",
-         "Auslädnischer Sprecher/Antragsteller"= "Teilprojektleiter*in/Antragsteller*in",
-         "Ausländische Sprecher/Antragsteller"= "Teilprojektleiter*in/Antragsteller*in",
-         "ausländischer Sprecher/Antragsteller"= "Teilprojektleiter*in/Antragsteller*in",
-         "Ausländischer Sprecher/Antragsteller"= "Teilprojektleiter*in/Antragsteller*in",
-         "AusländischerSprecher/Antragsteller"= "Teilprojektleiter*in/Antragsteller*in",
-         "Gastgeber/Antragsteller"= "Teilprojektleiter*in/Antragsteller*in",
-         "Leiter/Antragsteller"= "Sprecher*in",
-         "Sprecher & Teilprojektleiter"= "Sprecher*in",
-         "Sprecher/Antragsteller"="Sprecher*in",
-         "Stellvertreter/Antragsteller"="Teilprojektleiter*in/Antragsteller*in",
-         "Teilprojektleiter"="Teilprojektleiter*in/Antragsteller*in",
-         "Stellvertretender Sprecher"="Sprecher*in",
-         "stellvertretender Sprecher/Antragsteller"="Teilprojektleiter*in/Antragsteller*in")
-#Filtere Sprecher, gruppiere anhand "ID", ziehe, falls mehr als eine Zeile (Wenn eine ID mehr als 1x vorkommt) Zufallssample von n=1
-set.seed(123) # sorgt für konstantes Zufallssample
-Sprecher <- df %>% filter(Researcher_Role=="Sprecher*in") %>% group_by(ID) %>% sample_n(1)
 
-#Schreibe "Researcher_Name" der oben per Zufall gezogenen Sprecher in das Objekt "Str_Name_Sprecher"
-Str_Name_Sprecher <- Sprecher$Researcher_Name
-
-# Kopiere die Elemente des Objekte "Str_Name_Sprecher" in ein Element und trenne die Elemente durch logisches "Oder" ("|")
-Str_Name_Sprecher <- paste(Str_Name_Sprecher,collapse="|")
-
-# Filtere PIs, entferne Sprecher mit oben erstellten Namensvektor "Str_Name_Sprecher", gruppiere anhand "ID", ziehe, falls mehr als eine Zeile Zufallssample von n=1 (siehe vorgehen oben)
-PIs  <- df %>% filter(!str_detect(Researcher_Name, Str_Name_Sprecher)) %>% group_by(ID) %>% sample_n(1)
-
-# Binde Sprecher- und PI-Datensatz zeilenweise zusammen
-df_2 <- rbind(Sprecher,PIs)
-
-# Erzeugung einheitlich. Verbundname Var ----------------------------------
-ZOFAR <- df_2 %>% select(ID,Researcher_Name,Researcher_Role,Researcher_Mail,DFG_Verf,Lauf_Beend,FOR,FZT,SFB,SPP,TRR,Proj_Name,Proj_Num)
-rm(df_2,PIs,Sprecher,Str_Name_Sprecher)
-
-EXC <- ZOFAR %>% filter(DFG_Verf=="Exzellenzcluster"|DFG_Verf=="Exzellenzcluster (ExStra)") %>% select(ID,Proj_Name)
-ZOFAR <- merge(ZOFAR,EXC,all.x = T, by="ID")
-rm(EXC)
-
-ZOFAR$EXC <- str_squish(ZOFAR$Proj_Name.y)
-ZOFAR <- ZOFAR %>% select(-Proj_Name.x,-Proj_Num,-Proj_Name.y)
-
-# zum Zusammenführen wird die für die Datenaufbereitung der ZOFAR-Daten geschriebene Funktion verwendet
-unite_col_4 <- function(df,v,w,x,y,z) {
-
-  v[is.na(v)] <- "" #NA werden durch "" ersetzt
-  w[is.na(w)] <- "" #NA werden durch "" ersetzt
-  x[is.na(x)] <- "" #NA werden durch "" ersetzt
-  y[is.na(y)] <- "" #NA werden durch "" ersetzt
-
-  newvar <- paste0(v,w,x,y) #x und y werden verbunden
-  newvar[newvar==""]<-NA #leere Strings wieder in NA rückcodieren
-
-  df2 <- data.frame(df,newvar) #df und newvar werden spaltenweisen verbunden
-  colnames(df2)[colnames(df2)=="newvar"] <- z # setzt neuen Namen
-  return(df2)
-}
-
-# zum Zusammenführen wird die für die Datenaufbereitung der ZOFAR-Daten geschriebene Funktion verwendet
-unite_col_3 <- function(df,w,x,y,z) {
-
-  w[is.na(w)] <- "" #NA werden durch "" ersetzt
-  x[is.na(x)] <- "" #NA werden durch "" ersetzt
-  y[is.na(y)] <- "" #NA werden durch "" ersetzt
-
-  newvar <- paste0(w,x,y) #x und y werden verbunden
-  newvar[newvar==""]<-NA #leere Strings wieder in NA rückcodieren
-
-  df2 <- data.frame(df,newvar) #df und newvar werden spaltenweise verbunden
-  colnames(df2)[colnames(df2)=="newvar"] <- z # setzt neuen Namen
-  return(df2)
-}
-
-# zum Zusammenführen wird die für die Datenaufbereitung der ZOFAR-Daten geschriebene Funktion verwendet
-ZOFAR <- unite_col_4(ZOFAR,
-                  ZOFAR$FOR,
-                  ZOFAR$FZT,
-                  ZOFAR$SFB,
-                  ZOFAR$SPP,
-                  "VB_Name")
-# zum Zusammenführen wird die für die Datenaufbereitung der ZOFAR-Daten geschriebene Funktion verwendet
-ZOFAR <- unite_col_3(ZOFAR,ZOFAR$VB_Name,ZOFAR$TRR,ZOFAR$EXC,"verbundname")
-
-#entferne redudante Spaktenvektoren
-ZOFAR <- ZOFAR %>% select(-FOR,-FZT,-SFB,-SPP,-TRR,-EXC,-VB_Name)
-
-ZOFAR$verbundname <- str_squish(ZOFAR$verbundname) #löscht Leerzeichen innerhalb einer Zeichenkette
-# entferne unite funktion
-rm(list=ls(pattern="^unite")) #entferne alle Objekte, die mit "unite" beginnen aus dem Workspace
-
-df <- ZOFAR
-
-```
-
-```{r echo=FALSE, message=FALSE, warning=FALSE}
 #colnames(df)
 
-Ende <- df %>% filter(Lauf_Beend=="beendet")
-Lauf <- df %>% filter(Lauf_Beend=="laufend")
+Ende <- df %>% filter(laufend_beendet=="beendet")
+Lauf <- df %>% filter(laufend_beendet=="laufend")
 
 # # Anzahl TP
 # n_distinct(df$Proj_Num)*0.15
 # # Anzahle Verbünde
-# EXC <- df %>% filter(DFG_Verf=="Exzellenzcluster"|DFG_Verf=="Exzellenzcluster (ExStra)")
+# EXC <- df %>% filter(f_line=="Exzellenzcluster"|f_line=="Exzellenzcluster (ExStra)")
 # n_Verbund <- n_distinct(df$FOR) + n_distinct(df$FZT) + n_distinct(df$SFB) + n_distinct(df$SPP)  + n_distinct(df$TRR) + n_distinct(EXC$Proj_Num)
 # n_Verbund* 0.15
 
-Tab_Ende <- table(Ende$DFG_Verf,Ende$Researcher_Role)
+Tab_Ende <- table(Ende$f_line,Ende$rolle_de)
 Tab_Ende <- cbind(Tab_Ende, Total = rowSums(Tab_Ende))
 Tab_Ende <- rbind(Tab_Ende, Total = colSums(Tab_Ende))
 
-Tab_Lauf <- table(Lauf$DFG_Verf,Lauf$Researcher_Role)
+Tab_Lauf <- table(Lauf$f_line,Lauf$rolle_de)
 Tab_Lauf <- cbind(Tab_Lauf, Total = rowSums(Tab_Lauf))
 Tab_Lauf <- rbind(Tab_Lauf, Total = colSums(Tab_Lauf))
 
@@ -287,19 +184,21 @@ kable(Tab_Ende, "latex", booktabs = T,
   linesep = "",caption = 'Verteilung von Sprecher*innen und Principal Investigators beendeter Verbünde in der Grundgesamtheit',format.args = list(big.mark = ".")) %>%
 kable_styling("striped", full_width = F) %>%
   row_spec(7, bold = T) %>%
-  column_spec(4, bold = T) %>%
+  column_spec(6, bold = T) %>%
 kable_styling(latex_options = "HOLD_position",font_size = 8)
 
 kable(Tab_Lauf, "latex", booktabs = T,
   linesep = "", caption = 'Verteilung von Sprecher*innen und Principal Investigators laufender Verbünde in der Grundgesamtheit',format.args = list(big.mark = ".")) %>%
 kable_styling("striped", full_width = F) %>%
-  row_spec(8, bold = T) %>%
-  column_spec(4, bold = T) %>%
+  row_spec(7, bold = T) %>%
+  column_spec(6, bold = T) %>%
 kable_styling(latex_options = "HOLD_position",font_size = 8)
 
 ```
 
-\newpage
+# Rücklauf
+
+Am 16.09.2020 wurden initial die n=15.595 Zielpersonen per Email mit individualisierten Einladungslinks zum Websurvey eingeladen. Mit n=1.241 Zielpersonen konnte in dieser 1. Charge kein Kontakt aufgenommen werden. Dies war in den allermeisten Fällen auf die auf der Datenbank GEPRIS veralteten aber dennoch weiterhin gelisteten Mailadressen zurückzuführen. Für n=628 Zielpersonen konnten innerhalb von sieben Tagen alternative Kontaktadressen recherchiert werden, für n=613 Zielpersonen konnte kein alternativer Kontakt recherchiert werden. Mit einem Anteil von 4,03% der Zielpersonen der Grundgesamtheit konnte indes kein Kontakt hergestellt werden.
 
 # Literatur {-#literatur}
 \setlength{\parindent}{-0.2in}

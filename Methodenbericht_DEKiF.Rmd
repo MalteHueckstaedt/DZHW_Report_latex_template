@@ -3,7 +3,6 @@ title: "Determinanten und Effekte von Kooperation in homogenen und heterogenen F
 short-title: "Vorl. Daten- und Methodenbericht des Websurveys"
 author:
 - Malte Hückstädt
-#- Luca Marie Leisten
 date: "August 2020"
 doc-type: "Daten- und Methodenbericht"
 lang: de
@@ -148,7 +147,7 @@ library(openxlsx)
 library(sjmisc)
 library(kableExtra)
 library(pander)
-df <- read_excel("/Users/maltehueckstaedt/Google Drive/GitHub/AP6/data/final_data/zofar_df.xlsx", col_types = rep("text",12))
+df <- read_excel("/Users/maltehueckstaedt/Documents/Dokumente - Malte’s Imac/GitHub/AP6/data/final_data/zofar_df.xlsx", col_types = rep("text",19))
 
 
 df <- df %>% mutate(f_line=case_when(str_detect(verbundname_de, "EXC") ~ "Exzellenzcluster",

@@ -197,7 +197,7 @@ kable_styling(latex_options = "HOLD_position",font_size = 8)
 
 # Rücklauf
 
-Am 16.09.2020 wurden initial die n=15.595 Zielpersonen per Email mit individualisierten Einladungslinks zum Websurvey eingeladen. Mit n=1.241 Zielpersonen konnte in dieser 1. Charge kein Kontakt aufgenommen werden. Dies war in den allermeisten Fällen auf die auf der Datenbank GEPRIS veralteten aber dennoch weiterhin gelisteten Mailadressen zurückzuführen. Für n=628 Zielpersonen konnten innerhalb von sieben Tagen alternative Kontaktadressen recherchiert werden, für n=613 Zielpersonen konnte kein alternativer Kontakt recherchiert werden. Mit einem Anteil von 4,03% der Zielpersonen der Grundgesamtheit konnte indes kein Kontakt hergestellt werden.
+Am 16.09.2020 wurden initial die n=15.595 Zielpersonen per Email mit individualisierten Einladungslinks zum Websurvey eingeladen. Mit n=1.241 Zielpersonen konnte in dieser 1. Charge kein Kontakt aufgenommen werden. Dies war in den allermeisten Fällen auf die auf der Datenbank GEPRIS veralteten aber dennoch weiterhin gelisteten Mailadressen zurückzuführen. Für n=575 Zielpersonen konnten innerhalb von sieben Tagen funktionale, alternative Kontaktadressen recherchiert werden, für n=666 Zielpersonen konnte kein alternativer Kontakt recherchiert werden. Mit einem Anteil von 4,17% der Zielpersonen der Grundgesamtheit konnte indes kein Kontakt hergestellt werden.
 
 # Literatur {-#literatur}
 \setlength{\parindent}{-0.2in}

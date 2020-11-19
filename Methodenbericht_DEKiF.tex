@@ -1,0 +1,395 @@
+% partially adapated from pandoc latex template by Rmarkdown
+\documentclass[a4paper,10pt,twoside]{article}
+\renewcommand*\MakeUppercase[1]{#1}
+\usepackage[export]{adjustbox}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{stackengine}
+\usepackage{tcolorbox}
+\usepackage{emptypage}
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{placeins}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{titletoc}
+\dottedcontents{section}[1.5em]{\mdseries}{1.3em}{.6em}
+\usepackage{colortbl}
+\usepackage{float}
+% use Calibri system font:
+\usepackage{fontspec}
+\setmainfont{Calibri}
+% set line spacing:
+\usepackage{setspace}
+\setstretch{1.2}
+% math typing:
+\usepackage{amssymb,amsmath}
+% define command for euro symbol:
+\newcommand{\euro}{€}
+% use upquote for straight quotes in verbatim environments:
+\usepackage{upquote}
+% use microtype if available:
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+% set DZHW margins:
+\usepackage[top=2cm,bottom=2cm,outer=4cm,inner=2cm,includeheadfoot]{geometry}
+
+% get language from rmarkdown
+\usepackage[ngerman]{babel}
+% define DZHW blue
+\usepackage{xcolor}
+\definecolor{DZHWblue}{RGB}{0,106,178}
+
+\usepackage{longtable,booktabs}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% define header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear all fields
+\renewcommand{\headrulewidth}{0.5pt}
+% \fancyheadoffset[R]{\dimexpr4.8cm-2.2cm\relax}
+% \fancyfootoffset[R]{\dimexpr0.5cm\relax}
+\rhead{\leftmark}
+\lfoot{\setlength{\unitlength}{1mm}
+            \begin{picture}(0,0)
+            \put(0,0){\includegraphics[width=2.4cm,valign=C]{fdz-logo_ohne_text_dt.png}}
+            \end{picture}}
+\rfoot{\raisebox{.4ex}{Vorl. Daten- und Methodenbericht des Websurveys | \thepage}}
+
+\usepackage[unicode=true]{hyperref}
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Malte Hückstädt},
+            pdftitle={Determinanten und Effekte von Kooperation in homogenen und heterogenen Forschungsverbünden (DEKiF)},
+            colorlinks=true,
+            citecolor=DZHWblue,
+            urlcolor=DZHWblue,
+            linkcolor=black,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+% provide a tightlist as required by pandoc:
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% set indention of subsequent paragraphs:
+\setlength\parindent{0pt}
+% set vertical space betwen paragraphs:
+\setlength{\parskip}{0em}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+% allow for depth 5 in numbering sections
+\setcounter{secnumdepth}{0}
+% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+% titling to modify title page:
+\newgeometry{total={21cm,29.7cm}, left=4cm, right=2.5cm, top=1cm, bottom=1.5cm,includeheadfoot}
+
+%\footskip=1.5cm %Abstand zwischen Footer und Fließtext
+
+\usepackage{titling}
+\pretitle{\vspace{2cm}
+        \vfill
+        \flushleft%
+        \LARGE
+        Malte Hückstädt \\
+        \vspace{0.0cm}%
+        \Huge
+        }
+\posttitle{\flushleft%
+                \vspace{1cm}%
+        \Large
+        \textcolor{DZHWblue}{Vorl. Daten- und Methodenbericht des Websurveys}
+        % Vorl. Daten- und Methodenbericht des Websurveys
+        }
+\predate{\vfill
+        \flushright
+        \hspace*{-2cm}
+        \huge\textbf{Daten- und Methodenbericht}\\
+        \LARGE August 2020
+        \flushright}
+\postdate{%
+        \flushleft
+        \hspace*{-4cm}\includegraphics[width=20cm]{DZHW_blue_bar.png}\\
+        \vspace{0.7cm}
+        \hspace*{-1.5cm}\includegraphics[width=15.7cm]{BMBF_FDZ.png}\\
+        \vspace{-1.5cm}
+
+    }
+
+\usepackage{sectsty}
+\chapterfont{\color{DZHWblue}}  % sets colour of chapters
+\sectionfont{\color{DZHWblue}}
+
+% start actual document:
+\begin{document}
+% title page
+% title:
+\title{Determinanten und Effekte von Kooperation in homogenen und heterogenen Forschungsverbünden (DEKiF)}
+% date:
+\date{} % We don't use the latex command for the date
+% title page:
+\maketitle\thispagestyle{empty}
+\restoregeometry
+% impressum
+\cleardoublepage
+\pagenumbering{gobble}
+
+
+\null\vfill
+\footnotesize
+\noindent\textbf{Herausgeber:}\\
+Deutsches Zentrum für Hochschul- und Wissenschaftsforschung (DZHW) GmbH\\
+Lange Laube 12 | 30159 Hannover | info@dzhw.eu |www.dzhw.eu\\
+Postfach 2920 | 30029 Hannover\\
+Tel.: +49 511 450670-0 | Fax: +49 511 450670-960\\
+\textbf{Vorsitzender des Aufsichtsrats::}\\
+Ministerialdirigent Peter Greisler\\
+\textbf{Wissenschaftliche Geschäftsführung:}\\
+Prof. Dr. Monika Jungbauer-Gans\\
+\textbf{Administrative Geschäftsführung:}\\
+Karen Schlüter\\
+\textbf{Registergericht:}\\
+Amtsgericht Hannover | B 210251\\
+\\
+Dieses Werk steht unter der Creative Commons „Namensnennung – nicht\\ kommerziell – Weitergabe unter gleichen\\
+Bedingungen 3.0 Deutschland Lizenz“ (CC‐BY‐NC‐SA)\\
+\href{http://www.namsu.de}{https://creativecommons.org/licenses/by-nc-sa/3.0/}\\
+\\
+\includegraphics[width=3.33cm]{by-nc-sa.eu.png}
+
+
+% start main body:
+\cleardoublepage
+\setcounter{page}{1}
+\pagenumbering{gobble}
+\tableofcontents
+
+\cleardoublepage
+\pagenumbering{Roman}
+\listoffigures
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+
+\cleardoublepage
+\listoftables
+\addcontentsline{toc}{section}{Tabellenverzeichnis}
+
+\cleardoublepage
+\pagenumbering{arabic}
+
+\hypertarget{einleitung}{%
+\section{Einleitung}\label{einleitung}}
+
+Dieser vorläufige Daten- und Methodenbericht wurde vor der am 15.09.2020 beginnenden Feldphase des Websurveys erstellt. Informationen zum (bisherigen) Rücklauf, zur Repräsentativität sowie zu etwaigen Gewichtungsverfahren der gewonnenen Daten können an dieser Stelle deshalb nicht erfolgen. Wohl wird aber (1) ein kurzer Überblick über das Verbundprojekt \emph{Determinanten und Effekte von Kooperation in homogenen und heterogenen Forschungsverbünden} (DEKiF) erfolgen. Weiterhin werden (2) Inhalt und Fragestellung des eingebetteten Websurveys kurz vorgestellt, so wie (3) die anvisierte Grundgesamtheit dargestellt.
+
+\hypertarget{studienuxfcberblick}{%
+\section{Studienüberblick}\label{studienuxfcberblick}}
+
+Das Verbundprojekt DEKiF untersucht, welche internen Kooperationsprobleme in Forschungsverbünden auftreten, welche Ursachen und Rahmenbedingungen dafür maßgeblich sind und wie sich die Probleme auf Erfolg und die Produktivität von Forschungsverbünden auswirken. Weiterhin werden die Strategien ermittelt, die Forschungsverbünde anwenden, um die auftretenden Probleme zu lösen oder bereits im Vorfeld zu vermeiden.
+
+\vspace{3 mm}
+
+Die Studie folgt einem triangulierenden Mixed Methods-Design (\protect\hyperlink{ref-flickTriangulationEinfuehrung2011}{Flick 2011}): Sie setzt sich so zusammen aus einer explorativen Fallstudie, einem quantitativen Survey, bibliometrischen Analysen sowie vertiefenden Fallstudien in verschiedenen Untersuchungsfeldern.
+
+\vspace{3 mm}
+
+Das Verbundprojekt DEKiF wird vom \emph{Bundesministerium für Bildung und Forschung} (BMBF) bis 2022 gefördert. Seine Durchführung erfolgt in einer Kooperation zwischen dem DZHW (Abteilungen Governance in Hochschule und Wissenschaft und Forschungssystem und Wissenschaftsdynamik), der Heinrich-Heine-Universität Düsseldorf und dem Stifterverband für die Deutsche Wissenschaft.
+
+\hypertarget{websurvey}{%
+\section{Websurvey}\label{websurvey}}
+
+Im Rahmen des Websurveys (\protect\hyperlink{ref-callegaroWebSurveyMethodology2015}{Callegaro, Manfreda \emph{et al.} 2015} ) des Verbundprojekts DEKiF werden (1) die Prozesse der Zusammenarbeit in DFG-Forschungsverbünden, (2) die dabei auftretenden Probleme sowie (3) die subjektive Einschätzung des Erfolgs des Verbundes aus Sicht der Befragten untersucht. Die Prozesse, auftretende Probleme und Erfolgseinschätzungen werden dabei zu den Rahmenbedingungen (z.B. der personellen, räumlichen oder fachlichen Heterogenität) von Forschungsverbünden in Beziehung gesetzt. Forschungsfragen des Websurveys sind also:
+
+\begin{itemize}
+\tightlist
+\item
+  Welchen Effekt üben verschiedene Prozesse und Formen der Verbundarbeit auf die Eintrittswahrscheinlichkeit und die Intensität von Kooperationsproblemen aus?
+\item
+  Wie wirken sich die verschiedenen Prozesse und Formen der Verbundarbeit auf die subjektiv eingeschätzten Erfolgschancen der Zusammenarbeit aus?
+\item
+  Welchen Effekt üben auftretende Kooperationsprobleme auf die subjektiv eingeschätzten Erfolgschancen der Zusammenarbeit aus?
+\item
+  Wie wirken sich die Rahmenbedingungen von Forschungsverbünden auf den operativen Betrieb, die Eintrittswahrscheinlichkeit und die Intensität verschiedener Arten von Kooperationsproblemen sowie auf die eingeschätzten Erfolgschancen der Zusammenarbeit aus?
+\end{itemize}
+
+\vspace{3 mm}
+
+Themenblöcke der ca. 15-minütigen Befragung sind des Weiteren:
+
+\vspace{3 mm}
+
+\definecolor{DZHWblue}{RGB}{0,106,178}
+\newlist{packed_enum}{enumerate}{5}
+\setlist[packed_enum]{label*=(\arabic*)}
+
+\begin{center}
+\begin{tcolorbox}[width=10.7cm, sharp corners, colback=DZHWblue!20,
+before={\captionof{figure}{Themenblöcke des Websurveys}},
+after={}]
+
+\begin{packed_enum}[itemsep=0pt, parsep=0pt]
+
+    \item Initiierung und Auswahl der Verbundmitglieder
+    \item Formen der Verbundarbeit
+    \item Kommunikation im Verbund
+    \item Entwicklung gemeinsamer Forschungsfragen und Verbundziele
+    \item Voraussetzungen bzw. Verfahren der Integration von Forschungsergebnissen
+    \item Leitung und Koordination des Verbundes
+    \item Praktizierte Entscheidungsverfahren
+    \item Zusammenarbeit im Verbund
+    \item Probleme im Zusammenhang mit der gemeinsamen Verbundarbeit
+    \item Erfolg der gemeinsamen Verbundarbeit
+    \item Best Practice gemeinsamer Verbundarbeit
+    \item Persönliche Erwartungen an die Mitwirkung im Forschungsverbund
+    \item Randbedingungen des Forschungsverbundes
+    \item Demografie
+
+\end{packed_enum}
+
+\end{tcolorbox}
+\end{center}
+
+\vspace{3 mm}
+
+Der inhaltliche Bezugspunkt des Websurveys ist die Kooperation auf Verbundebene, also die Zusammenarbeit zwischen der Verbundleitung (Sprecher*in) und den Principal Investigators (Teilprojektleiter*innen/Antragsteller*innen). Die Zusammenarbeit innerhalb der Teilprojekte ist hingegen nicht Gegenstand der Befragung.
+
+\vspace{3 mm}
+
+Unter Verbundebene wird im Rahmen des Websurveys jene Ebene von Forschungsverbünden verstanden, auf der die Verbundleitung (Sprecher*in) und die Principal Investigator (Teilprojektleiter*innen/Antragsteller*innen) teilprojektübergreifend an der Erreichung der gemeinsamen Verbundziele arbeiten. Die nachfolgende Darstellung veranschaulicht schematisch den Zusammenhang zwischen verschiedenen Statusgruppen von Verbundmitgliedern, Teilprojekten und der Verbundebene eines Forschungsverbundes.
+
+
+
+\newcommand{\source}[1]{\caption*{Source: {#1}} }
+
+\begin{figure}[h]
+\caption{Bezugsebene des Websurvey}
+  \centering
+     \includegraphics[width=.9\textwidth]{Verbundebene.png}\linebreak
+
+  \begin{footnotesize}
+  \textit{Quelle: Eigene Darstellung, in Anlehnung an Defila et al. (\protect\hyperlink{ref-defilaForschungsverbundmanagementHandbuchFur2006}{2006, S. 28})}
+  \end{footnotesize}
+  \label{fig:Schimank}
+\end{figure}
+
+\hypertarget{grundgesamtheit}{%
+\section{Grundgesamtheit}\label{grundgesamtheit}}
+
+Im Mittelpunkt der Befragung stehen als Untersuchungseinheiten n=15.595 an Forschungsverbünden der Förderlinien \emph{koordinierte Programme} sowie der Förderlinie \emph{Exzellenzcluster} beteiligte Sprecher*innen und Principal Investigator (vgl. Tabelle 1 und 2). Anvisiert werden so mittels des Websurveys weiterhin laufende und nach 2015 beendete Verbünde der Förderlinien der \emph{Forschungsgruppen} (\protect\hyperlink{ref-deutscheforschungsgemeinschaftMerkblattForschungsgruppenDFGVordruck2018a}{Deutsche Forschungsgemeinschaft 2018a}),
+\emph{Forschungszentren} (\protect\hyperlink{ref-deutscheforschungsgemeinschaftMerkblattForschungszentrenDFGVordruck2010}{Deutsche Forschungsgemeinschaft 2010}),
+\emph{Sonderforschungsbereiche}(\protect\hyperlink{ref-deutscheforschungsgemeinschaftMerkblattSonderforschungsbereicheDFGVordruck2018}{Deutsche Forschungsgemeinschaft 2018b}), \emph{Transregios}(\protect\hyperlink{ref-deutscheforschungsgemeinschaftMerkblattSonderforschungsbereicheDFGVordruck2018}{Deutsche Forschungsgemeinschaft 2018b}), \emph{Schwerpunktprogramme} (\protect\hyperlink{ref-deutscheforschungsgemeinschaftMerkblattSchwerpunktprogrammDFGVordruck2015}{Deutsche Forschungsgemeinschaft 2015}) und
+\emph{Exzellenzcluster} (\protect\hyperlink{ref-deutscheforschungsgemeinschaftExzellenzcluster200520172016}{Deutsche Forschungsgemeinschaft 2016}, \protect\hyperlink{ref-deutscheforschungsgemeinschaftForderlinieExzellenzclusterExzellenzstrategieMerkblatt2019}{2019a}).
+
+Diese Zielpopulation birgt für den Websurvey des Verbundprojektes DEKiF verschiedene Vorteile: Unter den anvisierten Förderlinien firmieren deutschlandweit angesiedelte Forschungsverbünde, welche sich (auf Verbundebene) aus Wissenschaftler*innen aller Fachdisziplinen zusammensetzen und gleichzeitig eine maximale thematische Bandbreite aufweisen (vgl. \protect\hyperlink{ref-deutscheforschungsgemeinschaftForderatlas20182018}{Deutsche Forschungsgemeinschaft 2018c, S. 63, 93}, \protect\hyperlink{ref-deutscheforschungsgemeinschaftErhebungenKoordiniertenProgrammen2019}{2019b, S. 11}). Weiterhin variieren die anvisierten Verbünde stark in ihrer personellen, fachlichen und räumlichen Heterogenität. Dieser Umstand erlaubt es, die gewonnenen Befragungsdaten nicht nur über Förderlinien hinweg, sondern weiterhin anhand der vorgenannten Heterogenitätsdimensionen zu vergleichen.
+
+Schließlich liegt eine durch die Datenbank GEPRIS bereitgestellte, vollständige Liste aller in der Grundgesamtheit befindlichen Untersuchungselemente (Principal Investigators und Sprecher*innen der anvisierten Verbünde) vor. Diese bildet die Grundlage für spätere, belastbare, inferenzstatistische Datenanalysen sowie Unit- und Item-Non-Response-Analysen.
+
+\begin{table}[H]
+
+\caption{\label{tab:unnamed-chunk-1}Verteilung von Sprecher*innen und Principal Investigators beendeter Verbünde in der Grundgesamtheit}
+\centering
+\fontsize{8}{10}\selectfont
+\begin{tabular}[t]{lrrrr>{}r}
+\toprule
+  & Sprecher & Sprecherin & Teilprojektleiter/Antragsteller & Teilprojektleiterin/Antragstellerin & Total\\
+\midrule
+Exzellenzcluster & 38 & 7 & 330 & 87 & \textbf{462}\\
+Forschungsgruppen & 154 & 21 & 1.068 & 296 & \textbf{1.539}\\
+Forschungszentren & 5 & 0 & 16 & 3 & \textbf{24}\\
+Schwerpunktprogramme & 85 & 8 & 2.006 & 376 & \textbf{2.475}\\
+Sonderforschungsbereiche & 94 & 13 & 1.311 & 360 & \textbf{1.778}\\
+Transregios & 35 & 4 & 602 & 125 & \textbf{766}\\
+\textbf{Total} & \textbf{411} & \textbf{53} & \textbf{5.333} & \textbf{1.247} & \textbf{\textbf{7.044}}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+
+\caption{\label{tab:unnamed-chunk-1}Verteilung von Sprecher*innen und Principal Investigators laufender Verbünde in der Grundgesamtheit}
+\centering
+\fontsize{8}{10}\selectfont
+\begin{tabular}[t]{lrrrr>{}r}
+\toprule
+  & Sprecher & Sprecherin & Teilprojektleiter/Antragsteller & Teilprojektleiterin/Antragstellerin & Total\\
+\midrule
+Exzellenzcluster & 47 & 16 & 390 & 203 & \textbf{656}\\
+Forschungsgruppen & 118 & 29 & 895 & 332 & \textbf{1.374}\\
+Forschungszentren & 1 & 0 & 13 & 2 & \textbf{16}\\
+Schwerpunktprogramme & 68 & 18 & 1.778 & 501 & \textbf{2.365}\\
+Sonderforschungsbereiche & 137 & 27 & 1.991 & 711 & \textbf{2.866}\\
+Transregios & 65 & 1 & 917 & 290 & \textbf{1.273}\\
+\textbf{Total} & \textbf{436} & \textbf{91} & \textbf{5.984} & \textbf{2.039} & \textbf{\textbf{8.550}}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\hypertarget{ruxfccklauf}{%
+\section{Rücklauf}\label{ruxfccklauf}}
+
+Am 16.09.2020 wurden initial die n=15.595 Zielpersonen per Email mit individualisierten Einladungslinks zum Websurvey eingeladen. Mit n=1.241 Zielpersonen konnte in dieser 1. Charge kein Kontakt aufgenommen werden. Dies war in den allermeisten Fällen auf die auf der Datenbank GEPRIS veralteten aber dennoch weiterhin gelisteten Mailadressen zurückzuführen. Für n=575 Zielpersonen konnten innerhalb von sieben Tagen funktionale, alternative Kontaktadressen recherchiert werden, für n=666 Zielpersonen konnte kein alternativer Kontakt recherchiert werden. Mit einem Anteil von 4,17\% der Zielpersonen der Grundgesamtheit konnte indes kein Kontakt hergestellt werden.
+
+\hypertarget{literatur}{%
+\section*{Literatur}\label{literatur}}
+\addcontentsline{toc}{section}{Literatur}
+
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.2in}
+\setlength{\parskip}{0pt}
+
+\noindent
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{0}{0}
+\leavevmode\hypertarget{ref-callegaroWebSurveyMethodology2015}{}%
+Callegaro, Mario; Manfreda, Katja und Vehovar, Vasja (2015) Web Survey Methodology. {Los Angeles}: {Sage Publ}.
+
+\leavevmode\hypertarget{ref-defilaForschungsverbundmanagementHandbuchFur2006}{}%
+Defila, Rico; Di Giulio, Antonietta und Scheuermann, Michael (2006) Forschungsverbundmanagement: Handbuch für die Gestaltung inter- und transdisziplinärer Projekte. {Zürich}: {vdf Hochschulverlag}.
+
+\leavevmode\hypertarget{ref-deutscheforschungsgemeinschaftMerkblattForschungszentrenDFGVordruck2010}{}%
+Deutsche Forschungsgemeinschaft (2010) Merkblatt {Forschungszentren}: {DFG}-{Vordruck} 67.10 -- 10/10.
+
+\leavevmode\hypertarget{ref-deutscheforschungsgemeinschaftMerkblattForschungszentrenDFGVordruck2010}{}%
+Deutsche Forschungsgemeinschaft (2010) Merkblatt {Forschungszentren}: {DFG}-{Vordruck} 67.10 -- 10/10.
+
+\leavevmode\hypertarget{ref-deutscheforschungsgemeinschaftMerkblattSchwerpunktprogrammDFGVordruck2015}{}%
+Deutsche Forschungsgemeinschaft (2015) Merkblatt {Schwerpunktprogramm} - {DFG}-{Vordruck} 50.05 -- 11/15.
+
+\leavevmode\hypertarget{ref-deutscheforschungsgemeinschaftMerkblattSchwerpunktprogrammDFGVordruck2015}{}%
+Deutsche Forschungsgemeinschaft (2015) Merkblatt {Schwerpunktprogramm} - {DFG}-{Vordruck} 50.05 -- 11/15.
+
+\leavevmode\hypertarget{ref-deutscheforschungsgemeinschaftExzellenzcluster200520172016}{}%
+Deutsche Forschungsgemeinschaft (2016) Exzellenzcluster (2005-2017).
+
+\leavevmode\hypertarget{ref-deutscheforschungsgemeinschaftForderatlas20182018}{}%
+Deutsche Forschungsgemeinschaft (2018c) Förderatlas 2018. {Weinheim}: {Wiley-VCH Verlag GmbH \& Co. KGaA}.
+
+\leavevmode\hypertarget{ref-deutscheforschungsgemeinschaftMerkblattForschungsgruppenDFGVordruck2018a}{}%
+Deutsche Forschungsgemeinschaft (2018a) Merkblatt {Forschungsgruppen}: {DFG}-{Vordruck} 50.04 -- 10/18.
+
+\leavevmode\hypertarget{ref-deutscheforschungsgemeinschaftMerkblattSonderforschungsbereicheDFGVordruck2018}{}%
+Deutsche Forschungsgemeinschaft (2018b) Merkblatt {Sonderforschungsbereiche}: {DFG}-{Vordruck} 50.06 -- 07/18.
+
+\leavevmode\hypertarget{ref-deutscheforschungsgemeinschaftMerkblattSonderforschungsbereicheDFGVordruck2018}{}%
+Deutsche Forschungsgemeinschaft (2018b) Merkblatt {Sonderforschungsbereiche}: {DFG}-{Vordruck} 50.06 -- 07/18.
+
+\leavevmode\hypertarget{ref-deutscheforschungsgemeinschaftErhebungenKoordiniertenProgrammen2019}{}%
+Deutsche Forschungsgemeinschaft (2019b) Erhebungen in Den Koordinierten {Programmen} - {Ausgewählte Ergebnisse} Zum {Erhebungsjahr} 2019.
+
+\leavevmode\hypertarget{ref-deutscheforschungsgemeinschaftForderlinieExzellenzclusterExzellenzstrategieMerkblatt2019}{}%
+Deutsche Forschungsgemeinschaft (2019a) Förderlinie {Exzellenzcluster} Der {Exzellenzstrategie}-{Merkblatt}.
+
+\leavevmode\hypertarget{ref-flickTriangulationEinfuehrung2011}{}%
+Flick, Uwe (2011) Triangulation: Eine Einführung. 3. Aufl. {Wiesbaden}: {VS Verlag für Sozialwissenschaften}.
+
+\end{CSLReferences}
+
+
+\end{document}

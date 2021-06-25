@@ -199,6 +199,14 @@ kable_styling(latex_options = "HOLD_position",font_size = 8)
 
 Am 16.09.2020 wurden initial die n=15.595 Zielpersonen per Email mit individualisierten Einladungslinks zum Websurvey eingeladen. Mit n=1.241 Zielpersonen konnte in dieser 1. Charge kein Kontakt aufgenommen werden. Dies war in den allermeisten Fällen auf die auf der Datenbank GEPRIS veralteten aber dennoch weiterhin gelisteten Mailadressen zurückzuführen. Für n=575 Zielpersonen konnten innerhalb von sieben Tagen funktionale, alternative Kontaktadressen recherchiert werden, für n=666 Zielpersonen konnte kein alternativer Kontakt recherchiert werden. Mit einem Anteil von 4,17% der Zielpersonen der Grundgesamtheit konnte indes kein Kontakt hergestellt werden. Die Feldphase begann am 16.09.2020 und endete am 03.11.2020.
 
+Anvisierte Grundgesamtheit des DEKiF-Surveys waren n=15.595 an Forschungsverbünden der Förderlinien koordinierte Programme sowie der Förderlinie Exzellenzcluster beteiligte Sprecher*innen und Principal Investigator (laufender und beendeter Verbünde) 
+Rücklauf n=5312 (ca. 34%)
+Mit n=666 (ca. 4%) Zielpersonen konnte kein Kontakt hergestellt werden
+Beginn der Feldphase: 16.09.2020 
+Ende der Feldphase:  03.11.2020
+Rücklauf n=5312 34%
+
+
 # Literatur {-#literatur}
 \setlength{\parindent}{-0.2in}
 \setlength{\leftskip}{0.2in}
